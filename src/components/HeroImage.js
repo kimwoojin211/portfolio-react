@@ -1,15 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImage from '../img/IMG_0730-2.jpg';
 
 
+function HeroImage(props){
 
-function Hero(props){
+  // const style = {
+  //   'padding': '1em',
+  //   'height': '40vh',
+  //   'justify-content':'center',
+  //   'background-position': 'center',
+  //   'background-repeat': 'no-repeat',
+  //   'background-size': 'contain',
+  // };
+  
   return(
     <React.Fragment>
-      <img src={HeroImage} style={style}/>
+
     </React.Fragment>
   );
 }
 
-export default HeroImage.js
+export default HeroImage;

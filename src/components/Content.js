@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hero from './Hero';
 
 
 const ContentStyle = styled.div`
-  display:flex;
-  width:100%;
-  background: blue;
+  display: flex;
+  width: 100%;
+  background: black;
   color: white;
   height: 100vh
 `;

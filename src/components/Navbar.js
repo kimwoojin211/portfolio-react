@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
   width:100%;
+  height:5vh;
   background: linear-gradient(60deg, #000303,#032e26);
   animation: gradient 4s ease infinite;
   padding-top: 25px;
@@ -12,6 +13,7 @@ const NavbarStyle = styled.div`
   transition: all 0.4s ease-in-out;
   color: white;
   border-color: white;
+  font-size: 1.5em;
 `;
 
 function Navbar(){
