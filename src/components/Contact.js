@@ -1,3 +1,11 @@
 import React from 'react';
 
-export default function Contact();
+function Contact(){
+  return(
+    <React.Fragment>
+      
+    </React.Fragment>
+  );
+}
+
+export default Contact;

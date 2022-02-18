@@ -1,3 +1,11 @@
 import React from 'react';
 
-export default function Skills();
+function Skills(){
+  return(
+    <React.Fragment>
+      
+    </React.Fragment>
+  );
+}
+
+export default Skills;

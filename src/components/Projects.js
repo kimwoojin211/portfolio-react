@@ -1,3 +1,11 @@
 import React from 'react';
 
-export default function Projects();
+function Projects(){
+  return(
+    <React.Fragment>
+      
+    </React.Fragment>
+  );
+}
+
+export default Projects;

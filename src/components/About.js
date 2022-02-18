@@ -1,3 +1,11 @@
 import React from 'react';
 
-export default function About();
+function About(){
+  return(
+    <React.Fragment>
+
+    </React.Fragment>
+  );
+}
+
+export default About;
