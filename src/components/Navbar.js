@@ -11,6 +11,7 @@ const NavbarStyle = styled.div`
   z-index:2;
   transition: all 0.4s ease-in-out;
   color: white;
+  border-color: white;
 `;
 
 function Navbar(){
