@@ -7,8 +7,7 @@ const HomeStyle = styled.div`
   background-color: black;
   font-size: 1.2em;
   width:100%;
-  height:200vh;
-  color: orange;
+  height:190vh;
   };
 `;
 

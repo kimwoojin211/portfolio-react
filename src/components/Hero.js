@@ -39,7 +39,7 @@ function Hero(props){
   return(
     <React.Fragment>
       
-    <HeroStyle>
+      <HeroStyle>
         <div style={HeroOverlayStyle}>
           <h1 style={HeroTitleStyle}>Welcome to Woo Jin's Portfolio</h1>
         </div>
