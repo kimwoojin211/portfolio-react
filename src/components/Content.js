@@ -9,7 +9,7 @@ const ContentStyle = styled.div`
   color: white;
   height: 100vh;  
   align-items: center;
-
+  padding-top: 4vh;
 `;
 
 const ContentTextStyle = styled.div`
@@ -35,8 +35,8 @@ function Content(){
       <ContentStyle>
         <ContentTextStyle>
           <h2 style={h2Style}>Currently Under Construction.</h2>
-          <h3>Check out my Github for some example of coding projects</h3>
-          <h3>Come visit my LinkedIn for a little more of my history.</h3>
+          <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects</h3>
+          <h3>Come visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for a little more of my history.</h3>
           {/*<h3> Learn a little bit more about me on my about page</h3>*/}
           <h3>Let's connect! Click on "Contact" for the best way to get in touch!</h3>
         </ContentTextStyle>

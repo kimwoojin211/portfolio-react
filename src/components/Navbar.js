@@ -2,24 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
+  display: flex;
   width:100%;
-  height:5vh;
-  background: linear-gradient(60deg, #000303,#032e26);
+  height: 9vh;
+  background: linear-gradient(60deg,#032e26,#28a368);
   animation: gradient 4s ease infinite;
-  padding-top: 25px;
-  padding-bottom: 25px;
   background-size: 400% 400%;
   z-index:2;
   transition: all 0.4s ease-in-out;
   color: white;
   border-color: white;
   font-size: 1.5em;
+  align-items: center;
 `;
 
 function Navbar(){
+
+  const NavTextStyle = {
+    'margin': '1em'
+  };
+
   return(
     <NavbarStyle>
-      Home
+      <p style={NavTextStyle}>Home</p>
     </NavbarStyle>
   );
 }
