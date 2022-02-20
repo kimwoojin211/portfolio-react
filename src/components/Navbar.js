@@ -4,6 +4,7 @@ import Contact from './Contact';
 
 const NavbarStyle = styled.div`
   display: flex;
+  position: fixed;
   width:100%;
   height: 9vh;
   background: linear-gradient(60deg,#032e26,#28a368);

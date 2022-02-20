@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import HomeHero from '../components/HomeHero';
 import HomeContent from '../components/HomeContent';
+import { FullPage, Slide } from 'react-full-page';
 
 const HomeStyle = styled.div`
-  background-color: black;
   font-size: 1.2em;
   width:100%;
-  height:195vh; 
+  height:200vh; 
   };
 `;
 // eventually need to get height from subtracting navbar height from 
@@ -15,8 +15,14 @@ const HomeStyle = styled.div`
 function Home(){
   return(
     <HomeStyle>
-      <HomeHero/>
-      <HomeContent/>
+      <FullPage>
+        <Slide>
+          <HomeHero/>
+        </Slide>
+        <Slide>
+          <HomeContent/>
+        </Slide>
+      </FullPage>
     </HomeStyle>
   );
 }

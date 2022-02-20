@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from '../img/headshot.jpg';
 
 
 const HomeContentStyle = styled.div`
@@ -59,7 +60,7 @@ function HomeContent(){
             <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects</h3>
             <h3>Come visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for a little more of my history.</h3>
             {/*<h3> Learn a little bit more about me on my about page</h3>*/}
-            <h3>Let's connect! Click on "Contact" for the best way to get in touch!</h3>
+            <h3>Connect with me! Click on "Contact" for the best way to get in touch!</h3>
           </ContentTextStyle>
 
           <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img>

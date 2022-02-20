@@ -14,6 +14,11 @@ class PageControl extends React.Component{
       contactActive: false
     };
   }
+
+  handleScroll = () => {
+    //onkeydown onwheel, put short delay so people don't accidentally scroll fast back and forth (ondrag for mobile)
+  }
+
   render(){
     return(
       <React.Fragment>
