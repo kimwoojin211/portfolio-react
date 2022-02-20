@@ -33,29 +33,15 @@ function Contact(){
   return(
     <React.Fragment>
       <ContactBox>
-        <ContactInfo/>
+        <ContactInfo
+          iconSrcURL = 'https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-new-icon.ico'
+          redirectURL = 'mailto:kimwoojin211@gmail.com'
+          username = 'kimwoojin211'
+          color = 'green'/>
       </ContactBox>
     </React.Fragment>
   );
 }
 
-export default Contact;
 
-{/* <div id="contactBox">
-      <div class="contactIcons col-4">
-        <a href="https://www.instagram.com/w00j_w00j" class="ig icons"><img class="ig icons"
-            src="https://freeiconshop.com/wp-content/uploads/edd/instagram-new-flat.png" alt="Instagram"></a>
-        <a class="discord icons" href="https://discord.com/channels/@me"><img class="discord icons"
-            src="https://cdn.iconscout.com/icon/free/png-256/discord-2752210-2285027.png" alt="Discord"></a>
-        <a class="linkedin icons" href="https://www.linkedin.com/in/kimwoojin211/"><img class="linkedin icons"
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="Linkedin"></a>
-        <a class="gmail icons" href="mailto:kimwoojin211@gmail.com"><img class="gmail icons"
-            src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-new-icon.ico" alt="Gmail"></a>
-      </div>
-      <div class="contactInfo col-8">
-        <a class="usernames ig" href="https://www.instagram.com/w00j_w00j">w00j_w00j</a>
-        <a class="usernames discord" href="https://discord.com/channels/@me">Wooj#3015</a>
-        <a class="usernames linkedin" href="https://www.linkedin.com/in/kimwoojin211/">kimwoojin211</a>
-        <a class="usernames gmail" href="mailto:kimwoojin211@gmail.com">kimwoojin211</a>
-      </div>
-    </div> */}
+export default Contact;
