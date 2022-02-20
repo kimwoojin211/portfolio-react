@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Contact from './Contact';
 
 const NavbarStyle = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ function Navbar(){
   return(
     <NavbarStyle>
       <p style={NavTextStyle}>Home</p>
+      <Contact/>
     </NavbarStyle>
   );
 }

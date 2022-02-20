@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Content from '../components/Content';
-import Hero from '../components/Hero';
+import HomeHero from '../components/HomeHero';
+import HomeContent from '../components/HomeContent';
 
 const HomeStyle = styled.div`
   background-color: black;
@@ -15,10 +15,8 @@ const HomeStyle = styled.div`
 function Home(){
   return(
     <HomeStyle>
-      <Hero>
-      </Hero>
-      <Content>
-      </Content>
+      <HomeHero/>
+      <HomeContent/>
     </HomeStyle>
   );
 }

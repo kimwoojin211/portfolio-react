@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeroBackground from '../img/IMG_0730-2.jpg';
-// import HeroImage from './HeroImage';
 
 const HeroStyle = styled.div`
   background: grey;
@@ -16,7 +15,7 @@ const HeroStyle = styled.div`
 
 
 
-function Hero(props){
+function HomeHero(props){
   const HeroOverlayStyle = {
     'display': 'flex',
     'height': '100%',
@@ -48,23 +47,4 @@ function Hero(props){
   )
 }
 
-export default Hero;
-// const Hero = (props) => {
-//   const width = window.innerWidth;
-//   const height = window.innerHeight;
-  
-//   const style = {
-//     'position': 'fixed',
-//     'top': 0, 
-//     'left': 0,
-//     'min-width': '100%',
-//     'min-height': '100%'
-//   }
-  
-//   return(
-//     <div style={style}>
-//       <img src={`https://unsplash.it/${width}/${height}?image=${props.number}`} style={style}/>
-//     </div>
-//   )
-// }
-
+export default HomeHero;

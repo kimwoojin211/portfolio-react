@@ -8,19 +8,21 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Content from "./components/Content";
-import Hero from "./components/Hero";
+import Content from "./components/HomeContent";
+import Hero from "./components/HomeHero";
+import PageControl from "./components/PageControl";
 
 export default function App() {
   return (
     <main>
-      <Navbar />
+      <PageControl/>
+      {/* <Navbar />
       <Home />
-      {/* <About />
+      <About />
       <Projects />
       <Skills />
-      <Contact /> */}
-      <Footer />
+      <Contact />
+      <Footer /> */}
     </main>
   );
 }

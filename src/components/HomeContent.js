@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContentImage from './ContentImage';
 
 
-const ContentStyle = styled.div`
+const HomeContentStyle = styled.div`
   display: flex;
   width: 100%;
   background: black;
@@ -25,33 +24,49 @@ const ContentProfileStyle = styled.div`
 
 const ContentTextStyle =styled.div`
   flex-flow: column;
+  margin-left: 3vw;
 `;
 
 
 
-function Content(){
+function HomeContent(){
 
-  const h2Style = {
-    'paddingBottom': '1.4rem'
+  const h1Style = {
+    'paddingBottom': '1.4rem',
+    'textAlign': 'center',
   }
+  
+  const h3Style = {
+    'font-size': '1em'
+  }
+
+    const profilePicStyle = {
+    'border': 'solid',
+    'border-width': '2px',
+    'border-color': 'white',
+    'border-radius': '100%',
+    'width':'450px',
+    'height':'450px'
+  };
 
 
   return(
     <React.Fragment>
-      <ContentStyle>
+      <HomeContentStyle>
         <ContentProfileStyle>
           <ContentTextStyle>
-            <h2 style={h2Style}>Currently Under Construction.</h2>
+            <h1 style={h1Style}>Currently Under Construction.</h1>
             <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects</h3>
             <h3>Come visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for a little more of my history.</h3>
             {/*<h3> Learn a little bit more about me on my about page</h3>*/}
             <h3>Let's connect! Click on "Contact" for the best way to get in touch!</h3>
           </ContentTextStyle>
-          <ContentImage/>
+
+          <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img>
         </ContentProfileStyle>
-      </ContentStyle>
+      </HomeContentStyle>
     </React.Fragment>
   );
 };
 
-export default Content;
+export default HomeContent;
