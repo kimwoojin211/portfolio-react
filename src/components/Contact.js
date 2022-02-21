@@ -16,7 +16,7 @@ const ContactBoxStyle = styled.div`
   background:  rgb(0,0,0,0.64);
   border-radius:20px;
   border-color: white;
-  opacity: 1;
+  opacity: 0;
   box-shadow: 0px 0px 1px black,
   0px 0px 8px black,
   0px 0px 10px white,
@@ -30,17 +30,29 @@ const ContactBoxStyle = styled.div`
  const Wrapper = styled.div`
  .contact-enter {
   height: 0px;
+  opacity: 0;
 }
 .contact-enter-active {
   height: 178px;
-  transition: 0.8s;
+  opacity: 1;
+  transition: opacity 1s, height 1s;
+}
+.contact-enter-done {
+  height: 178px;
+  opacity: 1;
 }
 .contact-exit {
   height: 178px;
+  opacity: 1;
 }
 .contact-exit-active {
   height: 0px;
-  transition: 0.8s;
+  opacity: 0;
+  transition: opacity 1s, height 1s;
+}
+.contact-exit-done {
+  height: 0px;
+  opacity: 0;
 }
  `;
 
@@ -84,7 +96,7 @@ function Contact(props){
         timeout={400} 
         classNames='contact'>
         <ContactBoxStyle>
-          <ContactInfoContainer>
+          <ContactInfoContainer classNames='contact'>
             <ContactInfo
             iconSrcURL = 'https://img.icons8.com/color/344/twitch--v2.png'
             redirectURL = 'https://twitch.tv/w00j__'
