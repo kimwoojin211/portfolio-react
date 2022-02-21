@@ -31,7 +31,7 @@ function ContactInfo(props){
   };
 
   return(
-    <ContactInfoStyle>
+    <ContactInfoStyle >
       <a href={redirectURL}>
         <img src={iconSrcURL} alt="Gmail" style={IconStyle}/>
       </a>

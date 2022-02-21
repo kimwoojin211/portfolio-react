@@ -25,34 +25,39 @@ const ContactBoxStyle = styled.div`
   0px 0px 45px black,
   0px 0px 50px white,
   0px 0px 60px black;
+  display:none;
 `;
 
  const Wrapper = styled.div`
  .contact-enter {
   height: 0px;
   opacity: 0;
+  display: flex;
 }
 .contact-enter-active {
   height: 178px;
   opacity: 1;
-  transition: opacity 1s, height 1s;
+  transition: opacity 1.4s, height 1s;
 }
 .contact-enter-done {
   height: 178px;
   opacity: 1;
+  display: flex;
 }
 .contact-exit {
   height: 178px;
   opacity: 1;
+  display: flex;
 }
 .contact-exit-active {
   height: 0px;
   opacity: 0;
-  transition: opacity 1s, height 1s;
+  transition: opacity 0.5s, height 1s;
 }
 .contact-exit-done {
   height: 0px;
   opacity: 0;
+  display:none;
 }
  `;
 
@@ -93,10 +98,10 @@ function Contact(props){
     <Wrapper>
       <CSSTransition
         in={ContactDisplayState} 
-        timeout={400} 
+        timeout={{enter:950, exit:400}} 
         classNames='contact'>
         <ContactBoxStyle>
-          <ContactInfoContainer classNames='contact'>
+          <ContactInfoContainer>
             <ContactInfo
             iconSrcURL = 'https://img.icons8.com/color/344/twitch--v2.png'
             redirectURL = 'https://twitch.tv/w00j__'
