@@ -19,7 +19,7 @@ function ContactInfo(props){
   const IconStyle = {
   'width':'36px',
   'height': '36px',
-  'paddingRight':'1.3em'
+  'paddingRight':'1.7em'
   };
 
   const UsernameStyle = {

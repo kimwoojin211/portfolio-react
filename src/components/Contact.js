@@ -1,29 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContactInfo from './ContactInfo';
+import PropTypes from 'prop-types';
 
-const ContactBox = styled.div`
-  z-index: 1;
-  position: fixed;
-  borderWidth: 4px;
-  borderStyle: solid;
-  top:8vh;
-  right:10px;
-  width:300px;
-  height:190px;
-  background: black;
-  border-radius:20px;
-  border-color: #4B4C4B;
-  opacity: 0.73;
-  box-shadow: 0px 0px 1px black,
-  0px 0px 8px black,
-  0px 0px 10px white,
-  0px 0px 20px black,
-  0px 0px 30px black,
-  0px 0px 45px black,
-  0px 0px 50px white,
-  0px 0px 60px black;
-`;
+// const ContactBox = styled.div`
+//   z-index: 1;
+//   position: fixed;
+//   borderWidth: 4px;
+//   borderStyle: solid;
+//   top:8vh;
+//   right:.5vw;
+//   width:285px;
+//   height:190px;
+//   padding-right:15px;
+//   background:  rgb(0,0,0,0.64);
+//   border-radius:20px;
+//   border-color: white;
+//   opacity: 1;
+//   box-shadow: 0px 0px 1px black,
+//   0px 0px 8px black,
+//   0px 0px 10px white,
+//   0px 0px 20px black,
+//   0px 0px 30px black,
+//   0px 0px 45px black,
+//   0px 0px 50px white,
+//   0px 0px 60px black;
+// `;
 
 const ContactInfoContainer = styled.div`
   height: 100%;
@@ -33,10 +35,32 @@ const ContactInfoContainer = styled.div`
   padding: 14px 0px; 
 `;
 
-function Contact(){
+function Contact(props){
+  const {ContactDisplayState} = props;
+  
+  const ContactBoxStyle = {
+  'z-index': '1',
+  'position': 'fixed',
+  'borderWidth': '4px',
+  'borderStyle': 'solid',
+  'top':'8vh',
+  'right':'.5vw',
+  'width':'285px',
+  'height':'190px',
+  'padding-right':'15px',
+  'background':  'rgb(0,0,0,0.64)',
+  'border-radius':'20px',
+  'border-color': 'transparent',
+  'opacity': '1',
+  'box-shadow': '0px 0px 1px black,0px 0px 8px black,0px 0px 10px white,0px 0px 20px black, 0px 0px 30px black,0px 0px 45px black,0px 0px 50px white,0px 0px 60px black',
+  'display': ContactDisplayState
+};
+
+  console.log("ContactDisplayState =" + ContactDisplayState);
+  console.log("contactboxstyle display =" + ContactBoxStyle.display);
   return(
     <React.Fragment>
-      <ContactBox>
+      <div style={ContactBoxStyle}>
         <ContactInfoContainer>
           <ContactInfo
           iconSrcURL = 'https://img.icons8.com/color/344/twitch--v2.png'
@@ -62,10 +86,13 @@ function Contact(){
           username = 'kimwoojin211'
           color = 'green'/>
         </ContactInfoContainer>
-      </ContactBox>
+      </div>
     </React.Fragment>
   );
 }
 
+Contact.propTypes = {
+  displayContactActive: PropTypes.string,
+}
 
 export default Contact;

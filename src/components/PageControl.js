@@ -12,35 +12,29 @@ class PageControl extends React.Component{
     this.state = {
       pages: ['Home','About','Projects','Skill'],
       currentPage: 'Home',
-      contactActive: false
+      contactDisplay: false
     };
   }
 
   handleClickContact= () => {
     this.setState(prevState => ({
-      contactActive: !prevState.contactActive
+      contactDisplay: !prevState.contactDisplay
     }));
   }
 
-  handleScroll = () => {
-    //onkeydown onwheel, put short delay so people don't accidentally scroll fast back and forth (ondrag for mobile)
-  }
-
   render(){
-    let currentContactState = null;
+    let CurrentContactState = null;
     
-    if(this.state.contactActive){
-      // currentContactState = <Contact display='flex'/>
-      console.log('yup');
+    if(this.state.contactDisplay){
+      CurrentContactState = <Contact ContactDisplayState='flex'/>
     }
     else{
-      // currentContactState = <Contact display='none'/>
-      console.log('nope');
+      CurrentContactState = <Contact ContactDisplayState='none'/>
     }
     return(
       <React.Fragment>
         <Navbar onClickContact={this.handleClickContact}/>
-        <Contact/>
+        {CurrentContactState}
         <Home/>
         <Footer/>
       </React.Fragment>
