@@ -4,13 +4,15 @@ import Home from '../pages/Home';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Contact from './Contact';
+import {CSSTransition} from 'react-transition-group';
+
+ 
 
 class PageControl extends React.Component{
   constructor(props){
     super(props);
     console.log(props);
     this.state = {
-      pages: ['Home','About','Projects','Skill'],
       currentPage: 'Home',
       contactDisplay: false
     };
@@ -23,18 +25,22 @@ class PageControl extends React.Component{
   }
 
   render(){
-    let CurrentContactState = null;
+    // const contactHeight = (this.state.contactDisplay ? '140px' : '0px');
+    // let CurrentContactState = null;
     
-    if(this.state.contactDisplay){
-      CurrentContactState = <Contact ContactDisplayState='flex'/>
-    }
-    else{
-      CurrentContactState = <Contact ContactDisplayState='none'/>
-    }
+    // if(this.state.contactDisplay){
+    //   CurrentContactState = <Contact ContactHeight='178px' ContactDisplayState='flex'/>
+    // }
+    // else{
+    //   CurrentContactState = <Contact ContactHeight='0px' ContactDisplayState='none'/>
+    // }
     return(
       <React.Fragment>
         <Navbar onClickContact={this.handleClickContact}/>
-        {CurrentContactState}
+        {/* {CurrentContactState} */}
+        {/* <CSSTransition in={this.state.contactDisplay} timeout={400} classNames='contact'> */}
+          <Contact ContactDisplayState={this.state.contactDisplay}/>
+        {/* </CSSTransition> */}
         <Home/>
         <Footer/>
       </React.Fragment>

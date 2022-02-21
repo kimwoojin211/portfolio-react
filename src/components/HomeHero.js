@@ -26,9 +26,9 @@ function HomeHero(props){
 
   const HeroTitleStyle = {
     'display': 'flex',
-    'fontSize': '1.9em',
+    'fontSize': '1.97em',
     'width': '100%',
-    'margin': '0 0 .25em',
+    'margin': '13vh 0 .25em',
     'color': 'white',
     'justifyContent': 'center',
     'textShadow': '3px 4px black, 5px 5px rgb(112, 128, 141)'
