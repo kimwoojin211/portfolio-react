@@ -7,10 +7,10 @@ const ContactBox = styled.div`
   position: fixed;
   borderWidth: 4px;
   borderStyle: solid;
-  top:80px;
+  top:8vh;
   right:10px;
   width:300px;
-  height:220px;
+  height:190px;
   background: black;
   border-radius:20px;
   border-color: #4B4C4B;

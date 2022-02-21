@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Contact from './Contact';
+import PropTypes from 'prop-types';
 
 const NavbarStyle = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const NavbarStyle = styled.div`
   justify-content: space-between;
 `;
 
-function Navbar(){
+function Navbar(props){
 
   const NavHomeStyle = {
     'margin': '1em'
@@ -32,10 +33,14 @@ function Navbar(){
   return(
     <NavbarStyle>
       <p style={NavHomeStyle}>Home</p>
-      <p style={NavContactStyle}>Contact</p>
-      <Contact/>
+      <p style={NavContactStyle} onClick={props.onClickContact}>Contact</p>
+      {/* <Contact/> */}
     </NavbarStyle>
   );
+}
+
+Navbar.propTypes = {
+  onClickContact: PropTypes.func
 }
 
 export default Navbar;
