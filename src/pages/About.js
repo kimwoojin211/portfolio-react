@@ -15,10 +15,23 @@ const AboutStyle = styled.div`
 `;
 
 function About(){
-  const Line1 = `Thanks for your patience while I renovate my website.`;
+  const Line1 = {
+    'text':'Thanks for your patience while I renovate my website.',
+    'hrefURL':'',
+    'hrefText':'',
+    'hrefTextAfter':''
+  };
   // const Line2 = `Learn more about me through my <a href="http://kimwoojin211.github.io/portfolio/cv.html">CV</a>`;
-  const Line2 = `Learn more about background and history through my CV.`;
-  const Line3 = `Follow me on Twitch.tv, where I stream coding, games, performing arts, and more.`;
+  const Line2 = {
+      'text':'Learn more about background and history through my',
+      'hrefURL':'https://kimwoojin211.github.io/portfolio/cv.html',
+      'hrefText':'CV', 
+      'hrefTextAfter':'.'};
+  const Line3 = {
+      'text':'Follow me on',
+      'hrefURL':'https://twitch.tv/w00j__',
+      'hrefText':'Twitch.tv', 
+      'hrefTextAfter':', where I stream code, games, performing arts,& more.'};
 
   return(
     <AboutStyle>

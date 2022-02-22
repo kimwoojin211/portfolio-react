@@ -85,7 +85,7 @@ function Contact(props){
 //   'padding-right':'15px',
 //   'background':  'rgb(0,0,0,0.64)',
 //   'border-radius':'20px',
-//   'border-color': 'transparent',
+//   'border-color': 'transparent', 
 //   'opacity': '1',
 //   'box-shadow': '0px 0px 1px black,0px 0px 8px black,0px 0px 10px white,0px 0px 20px black, 0px 0px 30px black,0px 0px 45px black,0px 0px 50px white,0px 0px 60px black',
 //   'transition': '0.77s',

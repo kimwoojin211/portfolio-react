@@ -40,11 +40,6 @@ const ContentTextStyle =styled.div`
 
 function Content(props){
   const {Line1, Line2, Line3} = props;
-  const h1Style = {
-  }
-  
-  const h3Style = {
-  }
 
   const profilePicStyle = {
     'border': 'solid',
@@ -63,9 +58,9 @@ function Content(props){
         <ContentProfileStyle>
           <ContentTextStyle>
             <h1>Currently Under Construction.</h1>
-            <h3>{Line1}</h3>
-            <h3>{Line2}</h3>
-            <h3>{Line3}</h3>
+            <h3>{Line1.text} <a href={Line1.hrefURL}>{Line1.hrefText}</a>{Line1.hrefTextAfter}</h3>
+            <h3>{Line2.text} <a href={Line2.hrefURL}>{Line2.hrefText}</a>{Line2.hrefTextAfter}</h3>
+            <h3>{Line3.text} <a href={Line3.hrefURL}>{Line3.hrefText}</a>{Line3.hrefTextAfter}</h3>
           </ContentTextStyle>
 
           {/* <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
@@ -76,9 +71,9 @@ function Content(props){
 };
 
 Content.propTypes = {
-  Line1: PropTypes.string,
-  Line2: PropTypes.string,
-  Line3: PropTypes.string,
+  Line1: PropTypes.object,
+  Line2: PropTypes.object,
+  Line3: PropTypes.object,
 }
 
 export default Content;
