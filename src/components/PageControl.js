@@ -25,6 +25,15 @@ class PageControl extends React.Component{
     }));
   }
 
+  handleClickNav= (page) => {
+    console.log(`page clicked ${page}`);
+    this.setState({
+      currentPage: page
+    });
+    
+    console.log(`currentpage = ${this.state.currentPage}`);
+  }
+
   render(){
     // const contactHeight = (this.state.contactDisplay ? '140px' : '0px');
     // let CurrentContactState = null;
@@ -53,7 +62,9 @@ class PageControl extends React.Component{
 
     return(
       <React.Fragment>
-        <Navbar onClickContact={this.handleClickContact}/>
+        <Navbar 
+          onClickNav={this.handleClickNav}
+          onClickContact={this.handleClickContact}/>
         {/* {CurrentContactState} */}
         {/* <CSSTransition in={this.state.contactDisplay} timeout={400} classNames='contact'> */}
           <Contact ContactDisplayState={this.state.contactDisplay}/>

@@ -16,30 +16,52 @@ const NavbarStyle = styled.div`
   color: white;
   font-size: 1.5em;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+`;
+
+const NavHomeStyle = styled.div`
+  display:flex;
+  font-size: 1.7em;
+  margin: 1rem;
+
+`;
+
+const NavTextStyle = styled.div`
+  display:flex;
+  width:100%;
+  justify-content: flex-end;
+  font-size: 1em;
+  margin:0.4em;
+
+  p{
+    margin:0.5em;
+  }
+
 `;
 
 function Navbar(props){
-
-  const NavHomeStyle = {
-    'margin': '1em'
-  };
-  
-  const NavContactStyle = {
-    'margin': '1em'
-  }
+  const {onClickNav, onClickContact} = props;
+  // const NavHomeStyle = {
+  //   'margin': '1em'
+  // };
 
   return(
     <NavbarStyle>
-      <p style={NavHomeStyle}>Home</p>
-      <p style={NavContactStyle} onClick={props.onClickContact}>Contact</p>
+      <NavHomeStyle>
+        <p onClick={() => onClickNav('Home')}>Home</p>
+      </NavHomeStyle>
+      <NavTextStyle>
+        <p onClick={() => onClickNav('About')}>About</p>
+        <p onClick={onClickContact}>Contact</p>
+      </NavTextStyle>
       {/* <Contact/> */}
     </NavbarStyle>
   );
 }
 
 Navbar.propTypes = {
-  onClickContact: PropTypes.func
+  onClickContact: PropTypes.func,
+  onClickNav: PropTypes.func
 }
 
 export default Navbar;
