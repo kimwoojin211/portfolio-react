@@ -31,7 +31,7 @@ function Skills(){
   };
   
   const line3 = {
-  'text':'- I am certified as a',
+  'text':'- I am certified as a ',
   'hrefURL':'https://account.ncees.org/rn/2032805-1220275-eff7ec1',
   'hrefText':'NCEES Engineer-In-Traning', 
   'hrefTextAfter':', a requirement for a Professional Engineering License'

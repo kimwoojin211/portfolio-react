@@ -20,13 +20,13 @@ function Projects(){
     'text':'Check out my ',
     'hrefURL':'https://www.github.com/kimwoojin211',
     'hrefText':'Github',
-    'hrefTextAfter':'to see all my public coding projects.'
+    'hrefTextAfter':' to see all my public coding projects.'
   };
   const line2 = {
       'text':'Take a look through my ',
       'hrefURL':'https://kimwoojin211.github.io/portfolio/cv.html',
       'hrefText':'CV', 
-      'hrefTextAfter':'to see a list of projects and roles I participated in.'};
+      'hrefTextAfter':' to see a list of projects and roles I participated in.'};
 
   const lines = [line1, line2];
 
