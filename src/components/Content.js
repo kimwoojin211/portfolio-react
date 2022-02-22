@@ -6,26 +6,34 @@ import PropTypes from 'prop-types';
 const ContentStyle = styled.div`
   display: flex;
   width: 100%;
-  background: black;
+  background-color: rgba(0,0,0,0.42);
   color: white;
   height: 100vh;  
   align-items: center;
-  padding-top: 4vh;
+  padding-top: 2vh;
+  flex-direction: column;
+  font-size: 3rem;
+
 `;
 
 const ContentProfileStyle = styled.div`
   display:flex;
-  background-color: rgba(255, 206, 83, 0.442);
+  background-color: rgb(232, 171, 141, 0.422);
   height: 50%;
   width: 100%;  
   align-items: center;
   justify-content: space-around;
-  font-size: 1.5em;
+
+  h1{
+    font-size: 3.9rem;
+  }
 `;
 
 const ContentTextStyle =styled.div`
   flex-flow: column;
   margin-left: 3vw;
+  font-size: 1.7rem;
+  color: rgba(0,0,0,1);
 `;
 
 
@@ -39,12 +47,19 @@ function Content(props){
   }
 
   const profilePicStyle = {
+    'border': 'solid',
+    'border-width': '2px',
+    'border-color': 'white',
+    'border-radius': '100%',
+    'width':'450px',
+    'height':'450px'
   };
 
 
   return(
     <React.Fragment>
       <ContentStyle>
+        <h1 classNames='pageTitle'>About</h1>
         <ContentProfileStyle>
           <ContentTextStyle>
             <h1>Currently Under Construction.</h1>
@@ -52,6 +67,8 @@ function Content(props){
             <h3>{Line2}</h3>
             <h3>{Line3}</h3>
           </ContentTextStyle>
+
+          {/* <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
         </ContentProfileStyle>
       </ContentStyle>
     </React.Fragment>
