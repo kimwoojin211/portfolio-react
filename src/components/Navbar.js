@@ -52,6 +52,8 @@ function Navbar(props){
       </NavHomeStyle>
       <NavTextStyle>
         <p onClick={() => onClickNav('About')}>About</p>
+        <p onClick={() => onClickNav('Projects')}>Projects</p>
+        <p onClick={() => onClickNav('Skills')}>Skills</p>
         <p onClick={onClickContact}>Contact</p>
       </NavTextStyle>
       {/* <Contact/> */}

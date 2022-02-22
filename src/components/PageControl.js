@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from "prop-types";
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Projects from '../pages/Projects';
+import Skills from '../pages/Skills';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Contact from './Contact';
@@ -54,6 +56,12 @@ class PageControl extends React.Component{
       case 'About':
         return <About/>;
 
+      case 'Projects':
+        return <Projects/>;
+      
+      case 'Skills':
+        return <Skills/>;
+
       default:
         return <Home/>;
       //return <404 />;
@@ -65,11 +73,7 @@ class PageControl extends React.Component{
         <Navbar 
           onClickNav={this.handleClickNav}
           onClickContact={this.handleClickContact}/>
-        {/* {CurrentContactState} */}
-        {/* <CSSTransition in={this.state.contactDisplay} timeout={400} classNames='contact'> */}
-          <Contact ContactDisplayState={this.state.contactDisplay}/>
-        {/* </CSSTransition> */}
-        {/* <Home/> */}
+        <Contact ContactDisplayState={this.state.contactDisplay}/>
         {DisplayPage()}
         <Footer/>
       </React.Fragment>

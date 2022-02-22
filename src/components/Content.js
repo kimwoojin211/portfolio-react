@@ -16,32 +16,48 @@ const ContentStyle = styled.div`
 
 `;
 
-const ContentProfileStyle = styled.div`
-  display:flex;
-  background-color: rgb(232, 171, 141, 0.422);
-  height: 50%;
-  width: 100%;  
-  align-items: center;
-  justify-content: space-around;
+// const ContentProfileStyle = styled.div`
+//   display:flex;
+//   background-color: rgb(232, 171, 141, 0.422);
+//   height: 50%;
+//   width: 100%;  
+//   align-items: center;
+//   justify-content: space-around;
 
-  h1{
-    font-size: 3.9rem;
-  }
-`;
+//   h1{
+//     font-size: 3.9rem;
+//   }
+// `;
 
-const ContentTextStyle =styled.div`
-  flex-flow: column;
-  margin-left: 3vw;
-  font-size: 1.7rem;
-  color: rgba(0,0,0,1);
-`;
+// const ContentTextStyle =styled.div`
+//   flex-flow: column;
+//   margin-left: 3vw;
+//   font-size: 1.7rem;
+//   color: rgba(0,0,0,1);
+// `;
 
 
 
 function Content(props){
-  const {Line1, Line2, Line3} = props;
+  const {lines, title,bgcolor,textcolor} = props;
+  
+  const ContentProfileStyle = {
+  'display':'flex',
+  'background-color': bgcolor,
+  'height': '50%',
+  'width': '100%',  
+  'align-items': 'center',
+  'justify-content': 'space-around',
+  };
 
-  const profilePicStyle = {
+const ContentTextStyle = {
+  'flex-flow': 'column',
+  'margin-left': '3vw',
+  'font-size': '1.7rem',
+  'color': textcolor,
+};
+
+  const imageStyle = {
     'border': 'solid',
     'border-width': '2px',
     'border-color': 'white',
@@ -54,26 +70,27 @@ function Content(props){
   return(
     <React.Fragment>
       <ContentStyle>
-        <h1 classNames='pageTitle'>About</h1>
-        <ContentProfileStyle>
-          <ContentTextStyle>
+        <h1 classNames='pageTitle'>{title}</h1>
+        <div style={ContentProfileStyle}>
+          <div style={ContentTextStyle}>
             <h1>Currently Under Construction.</h1>
-            <h3>{Line1.text} <a href={Line1.hrefURL}>{Line1.hrefText}</a>{Line1.hrefTextAfter}</h3>
-            <h3>{Line2.text} <a href={Line2.hrefURL}>{Line2.hrefText}</a>{Line2.hrefTextAfter}</h3>
-            <h3>{Line3.text} <a href={Line3.hrefURL}>{Line3.hrefText}</a>{Line3.hrefTextAfter}</h3>
-          </ContentTextStyle>
+            { lines.map((line) =>
+                <h3>{line.text} <a href={line.hrefURL}>{line.hrefText}</a>{line.hrefTextAfter}</h3>)
+            }
+          </div>
 
-          {/* <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
-        </ContentProfileStyle>
+          {/* <img style={imageStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
+        </div>
       </ContentStyle>
     </React.Fragment>
   );
 };
 
 Content.propTypes = {
-  Line1: PropTypes.object,
-  Line2: PropTypes.object,
-  Line3: PropTypes.object,
+  lines: PropTypes.array,
+  title: PropTypes.string,
+  bgcolor: PropTypes.string,
+  textcolor: PropTypes.string
 }
 
 export default Content;

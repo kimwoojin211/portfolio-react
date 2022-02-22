@@ -35,17 +35,17 @@ const ContactBoxStyle = styled.div`
   display: flex;
 }
 .contact-enter-active {
-  height: 178px;
+  height: 182px;
   opacity: 1;
   transition: opacity 1.4s, height 1s;
 }
 .contact-enter-done {
-  height: 178px;
+  height: 182px;
   opacity: 1;
   display: flex;
 }
 .contact-exit {
-  height: 178px;
+  height: 182px;
   opacity: 1;
   display: flex;
 }

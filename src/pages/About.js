@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Content from '../components/Content';
 import AboutBackground from '../img/beach.jpg';
 
+
 const AboutStyle = styled.div`
   font-size: 1.2em;
   width:100%;
@@ -15,30 +16,32 @@ const AboutStyle = styled.div`
 `;
 
 function About(){
-  const Line1 = {
+  const line1 = {
     'text':'Thanks for your patience while I renovate my website.',
     'hrefURL':'',
     'hrefText':'',
     'hrefTextAfter':''
   };
-  // const Line2 = `Learn more about me through my <a href="http://kimwoojin211.github.io/portfolio/cv.html">CV</a>`;
-  const Line2 = {
+  const line2 = {
       'text':'Learn more about background and history through my',
       'hrefURL':'https://kimwoojin211.github.io/portfolio/cv.html',
       'hrefText':'CV', 
       'hrefTextAfter':'.'};
-  const Line3 = {
+  const line3 = {
       'text':'Follow me on',
       'hrefURL':'https://twitch.tv/w00j__',
       'hrefText':'Twitch.tv', 
       'hrefTextAfter':', where I stream code, games, performing arts,& more.'};
 
+  const lines = [line1, line2, line3];
+
   return(
     <AboutStyle>
       <Content
-        Line1 = {Line1}
-        Line2 = {Line2}
-        Line3 = {Line3}
+        lines = {lines}
+        title = 'About'
+        bgcolor = 'rgb(232, 171, 141, 0.422)'
+        textcolor= 'black'
         />
     </AboutStyle>
   );
