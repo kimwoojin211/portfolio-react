@@ -30,15 +30,20 @@ const ContentBannerWrapper = styled.div`
   height: 55%;
   width: 100%;  
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
 
 `;
 
-const ContentLineStyle = styled.div`
+const ContentLineWrapper = styled.div`
   flex-flow: column;
   margin-left: 3vw;
   font-size: 1.7rem;
   color: var(--color);
+
+`;
+
+const ContentLine = styled.h3`
   a{
     color: var(--link-color);
   }
@@ -60,14 +65,17 @@ function ContentUC(props){
     <ContentContainer>
       <h1 className='pageTitle'>{title}</h1>
       <ContentBannerWrapper style={{ '--background-color': bannerColor }}>
-        <ContentLineStyle style={{ 
+        <ContentLineWrapper style={{ 
           '--color': lineTextColor,
           '--link-color': lineLinkColor }} >
           <h1>Currently Under Construction</h1>
-          { lines.map((line) =>
-              <h3>{line.text} <a href={line.hrefURL}>{line.hrefText}</a>{line.hrefTextAfter}</h3>)
+          { 
+            lines.map((line,i) =>
+              <ContentLine key={i}>
+                {line.text} <a href={line.hrefURL}>{line.hrefText}</a>{line.hrefTextAfter}</ContentLine>
+              )
           }
-        </ContentLineStyle>
+        </ContentLineWrapper>
         {/* <img style={imageStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
       </ContentBannerWrapper>
     </ContentContainer>

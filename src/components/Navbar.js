@@ -1,6 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
+
+const gradient = keyframes`
+  0% {
+    background-position: 100% 0% ;
+  }
+  50% {
+    background-position: 30% 100% ;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+`;
 
 const NavbarStyle = styled.div`
   display: flex;
@@ -8,21 +20,26 @@ const NavbarStyle = styled.div`
   width:100%;
   height: 9vh;
   min-height: 65px;
-  background: linear-gradient(60deg,#032e26,#043128);
-  animation: gradient 4s ease infinite;
+  background: linear-gradient(60deg,black,#043128);
+  animation: ${gradient} 6s ease infinite;
   background-size: 400% 400%;
   z-index:3;
   transition: all 0.4s ease-in-out;
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   align-items: center;
   justify-content: flex-end;
+
+  a{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+  }
 `;
 
 const NavHomeStyle = styled.div`
   display:flex;
   font-size: 1.7em;
   margin: 1rem;
+  font-family: 'Neonderthaw';
 
 `;
 
@@ -33,7 +50,7 @@ const NavTextStyle = styled.div`
   font-size: 1em;
   margin:0.4em;
 
-  p{
+  a{
     margin:0.5em;
   }
 
@@ -41,22 +58,23 @@ const NavTextStyle = styled.div`
 
 function Navbar(props){
   const {onClickNav, onClickContact} = props;
-  // const NavHomeStyle = {
-  //   'margin': '1em'
-  // };
-
+  function handleClick(event,page){
+    event.preventDefault();
+    console.log('page= ' + page);
+    console.log('onClickNav= ' + onClickNav);
+    onClickNav(page);
+  } 
   return(
     <NavbarStyle>
       <NavHomeStyle>
-        <p onClick={() => onClickNav('Home')}>Home</p>
+        <a href='' onClick={(e) => handleClick(e,'Home')}>Home</a>
       </NavHomeStyle>
       <NavTextStyle>
-        <p onClick={() => onClickNav('About')}>About</p>
-        <p onClick={() => onClickNav('Projects')}>Projects</p>
-        <p onClick={() => onClickNav('Skills')}>Skills</p>
-        <p onClick={onClickContact}>Contact</p>
+        <a href='' onClick={(e) => handleClick(e,'About')}>About</a>
+        <a href='' onClick={(e) => handleClick(e,'Projects')}>Projects</a>
+        <a href='' onClick={(e) => handleClick(e,'Skills')}>Skills</a>
+        <a href='' onClick={onClickContact}>Contact</a>
       </NavTextStyle>
-      {/* <Contact/> */}
     </NavbarStyle>
   );
 }
@@ -67,3 +85,5 @@ Navbar.propTypes = {
 }
 
 export default Navbar;
+
+// think about using Route Router

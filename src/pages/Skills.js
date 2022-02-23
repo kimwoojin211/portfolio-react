@@ -58,7 +58,7 @@ function Skills(){
         lines = {lines}
         title = 'Skills'
         bannerColor = 'rgb(127, 127, 112, 0.42)'
-        lineTextColor = 'white'
+        lineTextColor = ''
         lineLinkColor = 'yellow'
         />
     </SkillStyle>

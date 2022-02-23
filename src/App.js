@@ -16,13 +16,6 @@ export default function App() {
   return (
     <main>
       <PageControl/>
-      {/* <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer /> */}
     </main>
   );
 }

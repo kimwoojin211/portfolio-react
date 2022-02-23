@@ -35,8 +35,8 @@ function Projects(){
         lines = {lines}
         title = 'Projects'
         bannerColor = 'rgb(27, 28, 43, 0.5)'
-        lineTextColor = 'white'
-        lineLinkColor = '#92cc7c'
+        lineTextColor = '#fffa6d'
+        lineLinkColor = '#a354ce'
         />
     </ProjectStyle>
   );

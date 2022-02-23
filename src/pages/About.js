@@ -11,7 +11,7 @@ import AboutBackground from '../img/beach.jpg';
   };
   
   const line2 = {
-      'text':'Learn more about background and history through my',
+      'text':'Learn more about my background and history through my',
       'hrefURL':'https://kimwoojin211.github.io/portfolio/cv.html',
       'hrefText':'CV', 
       'hrefTextAfter':'.'};
@@ -41,9 +41,9 @@ const AboutStyle = styled.div`
       <ContentUC
         lines = {lines}
         title = 'About'
-        bannerColor = 'rgb(232, 171, 141, 0.422)'
-        lineTextColor= 'black'
-        lineLinkColor = '#663366'
+        bannerColor = 'rgb(232, 171, 141, 0.462)'
+        lineTextColor= '#131184'
+        lineLinkColor = 'black'
         />
     </AboutStyle>
   );

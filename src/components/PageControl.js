@@ -15,9 +15,7 @@ const PageStyle = styled.div`
   display:flex;
   flex-direction: column;
   background-color:white;
-`
-;
-
+`;
 class PageControl extends React.Component{
   constructor(props){
     super(props);
@@ -39,22 +37,9 @@ class PageControl extends React.Component{
     this.setState({
       currentPage: page
     });
-    
-    console.log(`currentpage = ${this.state.currentPage}`);
   }
 
   render(){
-    // const contactHeight = (this.state.contactDisplay ? '140px' : '0px');
-    // let CurrentContactState = null;
-    // let currentPage = this.state.currentPage;
-
-    // if(this.state.contactDisplay){
-    //   CurrentContactState = <Contact ContactHeight='178px' ContactDisplayState='flex'/>
-    // }
-    // else{
-    //   CurrentContactState = <Contact ContactHeight='0px' ContactDisplayState='none'/>
-    // }
-
     const DisplayPage = () => {
       switch(this.state.currentPage){
 
