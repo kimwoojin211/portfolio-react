@@ -10,7 +10,6 @@ const HomeStyle = styled.div`
   height:200vh; 
   };
 `;
-// eventually need to get height from subtracting navbar height from 
 
 function Home(){
   return(

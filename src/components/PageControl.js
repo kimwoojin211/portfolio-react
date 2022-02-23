@@ -7,19 +7,14 @@ import Skills from '../pages/Skills';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Contact from './Contact';
-import {CSSTransition} from 'react-transition-group';
 
 const PageStyle = styled.div`
   width:100%;
-  height:100%;
+  height:auto;
   color: #008080;
-  font-size: 1.2em;
   display:flex;
   flex-direction: column;
-
-  h1{
-    font-size:3.9rem;
-  }
+  background-color:white;
 `
 ;
 
@@ -62,9 +57,7 @@ class PageControl extends React.Component{
 
     const DisplayPage = () => {
       switch(this.state.currentPage){
-      case 'Home':
-        return <Home/>;
-      
+
       case 'About':
         return <About/>;
 

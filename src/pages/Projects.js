@@ -36,7 +36,7 @@ function Projects(){
         title = 'Projects'
         bannerColor = 'rgb(27, 28, 43, 0.5)'
         lineTextColor = 'white'
-        lineLinkColor = 'lightgreen'
+        lineLinkColor = '#92cc7c'
         />
     </ProjectStyle>
   );

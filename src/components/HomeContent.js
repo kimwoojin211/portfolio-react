@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from '../img/headshot.jpg';
 
-
-const HomeContentStyle = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   width: 100%;
   background: black;
@@ -13,61 +12,54 @@ const HomeContentStyle = styled.div`
   padding-top: 4vh;
 `;
 
-const ContentProfileStyle = styled.div`
+const ContentBannerWrapper = styled.div`
   display:flex;
   background-color: rgba(255, 206, 83, 0.442);
-  height: 50%;
+  height: 55%;
   width: 100%;  
   align-items: center;
   justify-content: space-around;
-  font-size: 1.5em;
 `;
 
 const ContentTextStyle =styled.div`
   flex-flow: column;
   margin-left: 3vw;
+  font-size: 1.8rem;
+
+  h1{
+    text-align: center;
+    font-size: 4.2rem;
+  }
 `;
 
-
+const ProfilePic = styled.img`
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 100%;
+    width:450px;
+    height:450px;
+`
 
 function HomeContent(){
-
-  const h1Style = {
-    'paddingBottom': '1.4rem',
-    'textAlign': 'center',
-  }
-  
-  const h3Style = {
-    'font-size': '1em'
-  }
-
-    const profilePicStyle = {
-    'border': 'solid',
-    'border-width': '2px',
-    'border-color': 'white',
-    'border-radius': '100%',
-    'width':'450px',
-    'height':'450px'
-  };
-
-
   return(
-    <React.Fragment>
-      <HomeContentStyle>
-        <ContentProfileStyle>
+      <ContentContainer>
+        <ContentBannerWrapper>
           <ContentTextStyle>
-            <h1 style={h1Style}>Currently Under Construction.</h1>
+            <h1>Currently Under Construction</h1>
             <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects</h3>
             <h3>Come visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for a little more of my history.</h3>
-            {/*<h3> Learn a little bit more about me on my about page</h3>*/}
             <h3>Connect with me! Click on "Contact" for the best way to get in touch!</h3>
-          </ContentTextStyle>
 
-          <img style={profilePicStyle} src={Image} alt="Headshot of Woo Jin Kim"></img>
-        </ContentProfileStyle>
-      </HomeContentStyle>
-    </React.Fragment>
+          </ContentTextStyle>
+          <ProfilePic src={Image} alt="Headshot of Woo Jin Kim"/>
+        </ContentBannerWrapper>
+      </ContentContainer>
   );
 };
 
 export default HomeContent;
+
+/* alternate lines:
+    <h3> Learn a little bit more about me on my about page</h3>
+*/

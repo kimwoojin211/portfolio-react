@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Contact from './Contact';
 import PropTypes from 'prop-types';
 
 const NavbarStyle = styled.div`
