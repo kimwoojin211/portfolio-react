@@ -5,7 +5,6 @@ import AboutBackground from '../img/beach.jpg';
 
 
 const AboutStyle = styled.div`
-  font-size: 1.2em;
   width:100%;
   height:100vh;
   background-image: url(${AboutBackground});
@@ -16,11 +15,19 @@ const AboutStyle = styled.div`
 `;
 
 function About(){
+
+  const styles = {
+    'contentStyle':{
+      'bgcolor': 'rgb(232, 171, 141, 0.422)',
+      'textcolor': 'black'
+    },
+  };
+
   const line1 = {
-    'text':'Thanks for your patience while I renovate my website.',
-    'hrefURL':'',
-    'hrefText':'',
-    'hrefTextAfter':''
+    'text':'Click ',
+    'hrefURL':'https://kimwoojin211.github.io/portfolio',
+    'hrefText':'here',
+    'hrefTextAfter':' to view my old portfolio website, written in native JS + HTML'
   };
   const line2 = {
       'text':'Learn more about background and history through my',

@@ -26,7 +26,7 @@ function Footer(){
   return(
     <FooterStyle>
       <FooterBoxStyle>
-        <a href="https://github.com/kimwoojin211/portfolio" style = {HyperlinkStyle}>Check out the source code for this portfolio on Github</a>
+        <a href="https://github.com/kimwoojin211/portfolio-react" style = {HyperlinkStyle}>Check out the source code for this portfolio on Github</a>
       </FooterBoxStyle>
     </FooterStyle>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import styled from 'styled-components';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Projects from '../pages/Projects';
@@ -9,7 +9,19 @@ import Footer from './Footer';
 import Contact from './Contact';
 import {CSSTransition} from 'react-transition-group';
 
- 
+const PageStyle = styled.div`
+  width:100%;
+  height:100%;
+  color: #008080;
+  font-size: 1.2em;
+  display:flex;
+  flex-direction: column;
+
+  h1{
+    font-size:3.9rem;
+  }
+`
+;
 
 class PageControl extends React.Component{
   constructor(props){
@@ -69,14 +81,14 @@ class PageControl extends React.Component{
   };
 
     return(
-      <React.Fragment>
+      <PageStyle>
         <Navbar 
           onClickNav={this.handleClickNav}
           onClickContact={this.handleClickContact}/>
         <Contact ContactDisplayState={this.state.contactDisplay}/>
         {DisplayPage()}
         <Footer/>
-      </React.Fragment>
+      </PageStyle>
     )
   }
 }

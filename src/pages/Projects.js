@@ -7,7 +7,7 @@ import ProjectBackground from '../img/lake.jpg';
 const ProjectStyle = styled.div`
   font-size: 1.2em;
   width:100%;
-  height:100vh;
+  height:100%;
   background-image: url(${ProjectBackground});
   background-position: center;
   background-repeat: no-repeat;

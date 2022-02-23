@@ -7,7 +7,7 @@ import SkillBackground from '../img/palmsprings.jpg';
 const SkillStyle = styled.div`
   font-size: 1.2em;
   width:100%;
-  height:100vh;
+  height:100%;
   background-image: url(${SkillBackground});
   background-position: center;
   background-repeat: no-repeat;
@@ -31,10 +31,10 @@ function Skills(){
   };
   
   const line3 = {
-  'text':'- I am certified as a ',
+  'text':'- I am  ',
   'hrefURL':'https://account.ncees.org/rn/2032805-1220275-eff7ec1',
-  'hrefText':'NCEES Engineer-In-Traning', 
-  'hrefTextAfter':', a requirement for a Professional Engineering License'
+  'hrefText':'certified ', 
+  'hrefTextAfter':'as a NCEES Engineer-In-Traning, a requirement for a Professional Engineering License'
   };
 
   const line4 = {

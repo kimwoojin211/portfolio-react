@@ -3,33 +3,37 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 
-const ContentStyle = styled.div`
+const ContentDefaultStyle = styled.div`
   display: flex;
   width: 100%;
   background-color: rgba(0,0,0,0.42);
   color: white;
   height: 100vh;  
   align-items: center;
-  padding-top: 2vh;
   flex-direction: column;
   font-size: 3rem;
+  h1{
+    font-size: 3.9rem;
+  }
+
+  a{
+
+  }
 
 `;
 
-// const ContentProfileStyle = styled.div`
-//   display:flex;
-//   background-color: rgb(232, 171, 141, 0.422);
-//   height: 50%;
-//   width: 100%;  
-//   align-items: center;
-//   justify-content: space-around;
+const ContentWrapperStyle = styled.div`
+  display:flex;
+  background-color: rgb(232, 171, 141, 0.422);
+  height: 50%;
+  width: 100%;  
+  align-items: center;
+  justify-content: space-around;
 
-//   h1{
-//     font-size: 3.9rem;
-//   }
-// `;
 
-// const ContentTextStyle =styled.div`
+`;
+
+// const ContentLineStyle = styled.div`
 //   flex-flow: column;
 //   margin-left: 3vw;
 //   font-size: 1.7rem;
@@ -41,7 +45,7 @@ const ContentStyle = styled.div`
 function Content(props){
   const {lines, title,bgcolor,textcolor} = props;
   
-  const ContentProfileStyle = {
+  const ContentWrapperStyle = {
   'display':'flex',
   'background-color': bgcolor,
   'height': '50%',
@@ -69,9 +73,9 @@ const ContentTextStyle = {
 
   return(
     <React.Fragment>
-      <ContentStyle>
+      <ContentDefaultStyle>
         <h1 classNames='pageTitle'>{title}</h1>
-        <div style={ContentProfileStyle}>
+        <div style={ContentWrapperStyle}>
           <div style={ContentTextStyle}>
             <h1>Currently Under Construction.</h1>
             { lines.map((line) =>
@@ -81,7 +85,7 @@ const ContentTextStyle = {
 
           {/* <img style={imageStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
         </div>
-      </ContentStyle>
+      </ContentDefaultStyle>
     </React.Fragment>
   );
 };

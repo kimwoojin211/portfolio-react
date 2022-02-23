@@ -4,6 +4,7 @@ import HeroBackground from '../img/IMG_0730-2.jpg';
 
 const HeroStyle = styled.div`
   background: grey;
+  width: 100%;
   height: 100vh;
   background-image: url(${HeroBackground});
   background-position: center;

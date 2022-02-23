@@ -5,8 +5,26 @@ import PropTypes from 'prop-types';
 const ContactInfoStyle = styled.div`
   display: flex;
   height: 20%;
-  padding: 0 50px 5px 53px;
+  padding: 0 50px 5px 57px;
+
+  img{
+      width: 36px;
+      height: 36px;
+  }
+
+  a{
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    align-self: center;
+    text-shadow: var(--text-shadow);
+  }
+  
+  .usernameStyle{
+    padding-left:1.7em;
+  }
 `;
+
 function ContactInfo(props){
   const {iconSrcURL, redirectURL, username, color} = props;
   const textShadow = '0px 0px 1px ' + color + 
@@ -15,27 +33,11 @@ function ContactInfo(props){
                     ',0px 0px 20px ' + color + 
                     ',0px 0px 30px ' + color + 
                     ', 0px 0px 40px ' + color;
-  
-  const IconStyle = {
-  'width':'36px',
-  'height': '36px',
-  'paddingRight':'1.7em'
-  };
-
-  const UsernameStyle = {
-    'fontFamily': 'sans-serif',
-    'color': 'white',
-    'fontSize': '1.2rem',
-    'alignSelf': 'center',
-    'textShadow': textShadow
-  };
 
   return(
-    <ContactInfoStyle >
-      <a href={redirectURL}>
-        <img src={iconSrcURL} alt="Gmail" style={IconStyle}/>
-      </a>
-      <a href={redirectURL} style={UsernameStyle}>{username}</a>
+    <ContactInfoStyle style={{'--text-shadow': textShadow}}>
+      <a href={redirectURL}><img src={iconSrcURL}/></a>
+      <a href={redirectURL} className='usernameStyle'>{username}</a>
     </ContactInfoStyle>
   );
 }

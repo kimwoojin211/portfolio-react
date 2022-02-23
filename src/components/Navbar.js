@@ -14,7 +14,7 @@ const NavbarStyle = styled.div`
   z-index:3;
   transition: all 0.4s ease-in-out;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: flex-end;
 `;
