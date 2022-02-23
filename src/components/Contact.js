@@ -78,7 +78,7 @@ const ContactWrapper = styled.div`
 `;
 
 //Contact box styling
-const ContactBoxStyle = styled.div`
+const ContactBox = styled.div`
   borderWidth: 4px;
   borderStyle: solid;
   height: 100%;
@@ -109,9 +109,10 @@ function Contact(props){
         in={ContactDisplayState} 
         timeout={{enter:950, exit:400}} 
         classNames='contact'>
-        <ContactBoxStyle>
-          {contactArray.map((contact) =>
+        <ContactBox>
+          {contactArray.map((contact,i) =>
               <ContactInfo
+                  key={i}
                   iconSrcURL = {contact.iconSrcURL}
                   redirectURL = {contact.redirectURL}
                   username = {contact.username}
@@ -119,7 +120,7 @@ function Contact(props){
               />
             )
           }
-        </ContactBoxStyle>
+        </ContactBox>
       </CSSTransition>
     </ContactWrapper>
   );

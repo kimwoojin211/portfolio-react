@@ -9,25 +9,25 @@ const FooterStyle = styled.div`
   justify-content: center;
 `;
 
-const FooterBoxStyle = styled.div`
-    background: rgba(0,0,0,0.3);
-    border-radius: 1.5em;
-    border-width: 0.7em;
-    border-style: solid;
-    border-color: transparent;
+const FooterOverlay = styled.div`
+  background: rgba(0,0,0,0.3);
+  border-radius: 1.5em;
+  border-width: 0.7em;
+  border-style: solid;
+  border-color: transparent;
+  
+  a{
+    color: rgb(244, 229, 166, 0.7);
+  }
   `;
 
 function Footer(){
-  const HyperlinkStyle = {
-    'color':'rgb(244, 229, 166, 0.7)',
-
-  }
 
   return(
     <FooterStyle>
-      <FooterBoxStyle>
-        <a href="https://github.com/kimwoojin211/portfolio-react" style = {HyperlinkStyle}>Check out the source code for this portfolio on Github</a>
-      </FooterBoxStyle>
+      <FooterOverlay>
+        <a href="https://github.com/kimwoojin211/portfolio-react">Check out the source code for this portfolio on Github</a>
+      </FooterOverlay>
     </FooterStyle>
   );
 }

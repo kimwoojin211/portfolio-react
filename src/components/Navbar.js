@@ -8,6 +8,7 @@ const NavbarStyle = styled.div`
   position: fixed;
   width:100%;
   height: 9vh;
+  min-height: 65px;
   background: linear-gradient(60deg,#032e26,#043128);
   animation: gradient 4s ease infinite;
   background-size: 400% 400%;
