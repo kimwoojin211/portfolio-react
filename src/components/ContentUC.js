@@ -52,15 +52,6 @@ const ContentLine = styled.h3`
 function ContentUC(props){
   const {lines, title, bannerColor, lineTextColor, lineLinkColor} = props;
 
-  // const imageStyle = {
-  //   'border': 'solid',
-  //   'border-width': '2px',
-  //   'border-color': 'white',
-  //   'border-radius': '100%',
-  //   'width':'450px',
-  //   'height':'450px'
-  // };
-
   return(
     <ContentContainer>
       <h1 className='pageTitle'>{title}</h1>
@@ -76,7 +67,6 @@ function ContentUC(props){
               )
           }
         </ContentLineWrapper>
-        {/* <img style={imageStyle} src={Image} alt="Headshot of Woo Jin Kim"></img> */}
       </ContentBannerWrapper>
     </ContentContainer>
   );

@@ -43,4 +43,3 @@ function HomeHero(props){
 
 export default HomeHero;
 
-//stretch goal: make an animation that starts w/ a WWW that splits into Welcome to Woo Jin's Website

@@ -60,6 +60,3 @@ function HomeContent(){
 
 export default HomeContent;
 
-/* alternate lines:
-    <h3> Learn a little bit more about me on my about page</h3>
-*/

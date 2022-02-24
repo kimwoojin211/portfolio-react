@@ -52,66 +52,18 @@ const NavbarContainer = styled.div`
   }
 `;
 
-// const NavHomeStyle = styled.div`
-//   display:flex;
-//   font-size: 1.7em;
-//   margin: 1rem;
-//   font-family: 'Neonderthaw';
-
-// `;
-
-// const NavTextStyle = styled.div`
-//   display:flex;
-//   width:100%;
-//   justify-content: flex-end;
-//   font-size: 1em;
-//   margin:0.4em;
-
-//   a{
-//     margin:0.5em;
-//   }
-
-// `;
-
-// const NavLink = styled.a`  
-//   color: white;
-//   text-shadow: 0px 0px 5px white,
-//     0px 0px 10px white,
-//     0px 0px 20px white;
-// }
-  
-// `;
-
 function Navbar(props){
-  const {onClickNav, onClickContact, activePage, pageClasses} = props;
-  console.log(`pageClasses = ${Object.entries(pageClasses)}`)
-  // console.log('navActiveStyle= ' + navActiveStyle +  '`(${typeof navActiveStyle})`');
-  // const navActive = JSON.parse(navActiveStyle);
-  // console.log(currentPage);
-
-  // const navActive = styled.a``
-
-  //   '.${currentPage}.color': 'white',
-  //   '.${currentPage}.text-shadow': '0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white;'
-  // // };
-  // console.log(navActive);
+  const {onClickNav, pageClasses} = props;
 
   function handleClick(event,page){
-    console.log('event= ' + event.target.className);
     event.preventDefault();
-    console.log('page= ' + page);
     onClickNav(page);
-    //add class somewhere for when page is active and text is glowing and remove when page no longer active
+
   } 
   return(
     <NavbarContainer>
       { Object.entries(pageClasses).map(([key,value]) => 
           <a href='/' className={key + value} onClick={(e) => handleClick(e,key)}>{key}</a>) }
-        {/* <a href='/' className={class} onClick={(e) => handleClick(e,activePage)}>{activePage}</a>
-        <a href='/' className='About' onClick={(e) => handleClick(e,'About')}>About</a>
-        <a href='/' className='Projects' onClick={(e) => handleClick(e,'Projects')}>Projects</a>
-        <a href='/' className='Skills' onClick={(e) => handleClick(e,'Skills')}>Skills</a>
-        <a href='/' className='navContact' onClick={(e) => onClickContact(e)}>Contact</a> */}
     </NavbarContainer>
   );
 }
@@ -119,11 +71,8 @@ function Navbar(props){
 Navbar.propTypes = {
   onClickContact: PropTypes.func,
   onClickNav: PropTypes.func,
-  // navActiveStyle: PropTypes.string
   activePage: PropTypes.string,
   pageClasses: PropTypes.object,
 }
 
 export default Navbar;
-
-// think about using Route Router

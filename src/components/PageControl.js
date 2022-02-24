@@ -46,21 +46,14 @@ class PageControl extends React.Component{
     }
   }
 
-  // handleClickNav= (page) => {
-  //   this.setState({
-  //     currentPage: page
-  //   });
-  // }
-// next attempt: forget currentPage, repurpose pages to include active 
+
   render(){
     const {pages, activePage, contactDisplay} = this.state;
-    // const activePageIndex = pages.indexOf(activePage);
     const pageClasses = {...pages, 
                           [`${activePage}`]:' active', 
                           'Contact': `${contactDisplay ? ' active':''}`
                         };
     console.log({pageClasses});
-    // const pageClasses = pages.splice(activePageIndex, 1, activePage + ' active');
     const DisplayPage = () => {
       switch(activePage){
 
