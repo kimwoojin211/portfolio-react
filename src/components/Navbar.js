@@ -83,7 +83,8 @@ const NavbarContainer = styled.div`
 // `;
 
 function Navbar(props){
-  const {onClickNav, onClickContact, activePage} = props;
+  const {onClickNav, onClickContact, activePage, pageClasses} = props;
+  console.log(`pageClasses = ${Object.entries(pageClasses)}`)
   // console.log('navActiveStyle= ' + navActiveStyle +  '`(${typeof navActiveStyle})`');
   // const navActive = JSON.parse(navActiveStyle);
   // console.log(currentPage);
@@ -104,11 +105,13 @@ function Navbar(props){
   } 
   return(
     <NavbarContainer>
-        <a href='/' className='Home' onClick={(e) => handleClick(e,'Home')}>Home</a>
-        <a href='/' className='navAbout' onClick={(e) => handleClick(e,'About')}>About</a>
-        <a href='/' className='navProjects' onClick={(e) => handleClick(e,'Projects')}>Projects</a>
-        <a href='/' className='navSkills' onClick={(e) => handleClick(e,'Skills')}>Skills</a>
-        <a href='/' className='navContact' onClick={(e) => onClickContact(e)}>Contact</a>
+      { Object.entries(pageClasses).map(([key,value]) => 
+          <a href='/' className={key + value} onClick={(e) => handleClick(e,key)}>{key}</a>) }
+        {/* <a href='/' className={class} onClick={(e) => handleClick(e,activePage)}>{activePage}</a>
+        <a href='/' className='About' onClick={(e) => handleClick(e,'About')}>About</a>
+        <a href='/' className='Projects' onClick={(e) => handleClick(e,'Projects')}>Projects</a>
+        <a href='/' className='Skills' onClick={(e) => handleClick(e,'Skills')}>Skills</a>
+        <a href='/' className='navContact' onClick={(e) => onClickContact(e)}>Contact</a> */}
     </NavbarContainer>
   );
 }
@@ -118,6 +121,7 @@ Navbar.propTypes = {
   onClickNav: PropTypes.func,
   // navActiveStyle: PropTypes.string
   activePage: PropTypes.string,
+  pageClasses: PropTypes.object,
 }
 
 export default Navbar;

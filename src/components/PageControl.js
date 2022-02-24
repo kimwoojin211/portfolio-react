@@ -22,10 +22,13 @@ class PageControl extends React.Component{
     super(props);
     console.log(props);
     this.state = {
-      currentPage: 'Home',
+      pages: {'Home':'','About':'','Projects':'','Skills':'','Contact':''},
+      activePage: 'Home',
       contactDisplay: false
     };
-  }
+  }      
+
+
 
   handleClickContact= () => {
     this.setState(prevState => ({
@@ -34,15 +37,32 @@ class PageControl extends React.Component{
   }
 
   handleClickNav= (page) => {
-    this.setState({
-      currentPage: page
-    });
+    if (page === 'Contact'){
+      this.setState(prevState => ({
+      contactDisplay: !prevState.contactDisplay}))
+    }
+    else {
+      this.setState({activePage: page});
+    }
   }
 
+  // handleClickNav= (page) => {
+  //   this.setState({
+  //     currentPage: page
+  //   });
+  // }
+// next attempt: forget currentPage, repurpose pages to include active 
   render(){
-
+    const {pages, activePage, contactDisplay} = this.state;
+    // const activePageIndex = pages.indexOf(activePage);
+    const pageClasses = {...pages, 
+                          [`${activePage}`]:' active', 
+                          'Contact': `${contactDisplay ? ' active':''}`
+                        };
+    console.log({pageClasses});
+    // const pageClasses = pages.splice(activePageIndex, 1, activePage + ' active');
     const DisplayPage = () => {
-      switch(this.state.currentPage){
+      switch(activePage){
 
       case 'About':
         return <About/>;
@@ -62,7 +82,8 @@ class PageControl extends React.Component{
     return(
       <PageStyle>
         <Navbar 
-          activePage={this.state.currentPage}
+          activePage={activePage}
+          pageClasses={pageClasses}
           onClickNav={this.handleClickNav}
           onClickContact={this.handleClickContact}/>
         <Contact ContactDisplayState={this.state.contactDisplay}/>
