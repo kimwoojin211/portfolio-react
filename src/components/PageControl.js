@@ -16,6 +16,7 @@ const PageStyle = styled.div`
   flex-direction: column;
   background-color:white;
 `;
+
 class PageControl extends React.Component{
   constructor(props){
     super(props);
@@ -33,13 +34,13 @@ class PageControl extends React.Component{
   }
 
   handleClickNav= (page) => {
-    console.log(`page clicked ${page}`);
     this.setState({
       currentPage: page
     });
   }
 
   render(){
+
     const DisplayPage = () => {
       switch(this.state.currentPage){
 
@@ -61,6 +62,7 @@ class PageControl extends React.Component{
     return(
       <PageStyle>
         <Navbar 
+          activePage={this.state.currentPage}
           onClickNav={this.handleClickNav}
           onClickContact={this.handleClickContact}/>
         <Contact ContactDisplayState={this.state.contactDisplay}/>

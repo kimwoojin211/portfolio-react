@@ -24,8 +24,6 @@ import AboutBackground from '../img/beach.jpg';
 
   const lines = [line1, line2, line3];
 
-function About(){
-
 const AboutStyle = styled.div`
   width:100%;
   height:100vh;
@@ -36,6 +34,7 @@ const AboutStyle = styled.div`
   };
 `;
 
+function About(){
   return(
     <AboutStyle>
       <ContentUC
