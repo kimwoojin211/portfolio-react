@@ -23,11 +23,6 @@ const PageStyle = styled.div`
   }
 `;
 
-const mobileView = styled.div`
-
-`;
-
-
 
 class PageControl extends React.Component{
   constructor(props){

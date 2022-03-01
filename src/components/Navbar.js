@@ -137,12 +137,6 @@ function Navbar(props){
       </NavbarOverlay>
       <NavbarMenu>
         <a href='/' className={menuClass} onClick={(e) => handleClick(e,'Menu')}>Menu</a>
-        {/* hamburger menu */}
-        {/* <svg viewBox="0 0 100 80" width="45" height="40">
-          <rect width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
-          <rect y="30" width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
-          <rect y="60" width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
-        </svg> */}
       </NavbarMenu>
     </NavbarContainer>
   );
