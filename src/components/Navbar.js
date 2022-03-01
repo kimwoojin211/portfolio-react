@@ -17,6 +17,7 @@ const gradient = keyframes`
 const NavbarContainer = styled.div`
   display: flex;
   position: fixed;
+  top:0;
   width:100%;
   height: 9vh;
   min-height: 65px;
@@ -35,6 +36,7 @@ const NavbarContainer = styled.div`
     text-decoration: none;
     padding: 0px 15px 0 10px ;
     font-family: 'Monoton';
+    overflow:hidden;
   }
   
   a:hover, .active{
@@ -45,11 +47,57 @@ const NavbarContainer = styled.div`
     }
 
   .Home {
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-family: 'Neonderthaw';
     margin-right: auto;
     padding-left: 20px;
   }
+
+  @media (max-width: 760px) {
+    font-size: 3vw;
+    justify-content: space-between;
+  }
+
+`;
+
+const NavbarOverlay = styled.div`
+  display:flex;
+  width:100%;
+  height:100%;
+  align-items: center;
+  position:fixed;
+  
+  @media (max-width: 475px) {
+    position:fixed;
+    top:0;
+    height:100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:15px 0 60px 0;
+
+    a{
+      display: none;
+    }
+
+    .Home{
+      display: flex;
+    }
+  }
+`;
+
+
+const NavbarMenu = styled.div`
+  margin-left: auto;
+  display: none;
+  height: 100%;
+  font-size: 2rem;
+  align-items: center;
+  padding-top: 4px;
+
+  @media (max-width: 475px) {
+    display: flex;
+  }
+  
 `;
 
 function Navbar(props){
@@ -62,8 +110,20 @@ function Navbar(props){
   } 
   return(
     <NavbarContainer>
-      { Object.entries(pageClasses).map(([key,value]) => 
-          <a href='/' className={key + value} onClick={(e) => handleClick(e,key)}>{key}</a>) }
+      <NavbarOverlay>
+        { Object.entries(pageClasses).map(([key,value]) => 
+            <a href='/' className={key + value} onClick={(e) => handleClick(e,key)}>{key}</a>) 
+        }
+      </NavbarOverlay>
+      <NavbarMenu>
+        <a href='/'>Menu</a>
+        {/* hamburger menu */}
+        {/* <svg viewBox="0 0 100 80" width="45" height="40">
+          <rect width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
+          <rect y="30" width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
+          <rect y="60" width="95" height="20" rx="14" fill="transparent" stroke="white" stroke-width="3"></rect>
+        </svg> */}
+      </NavbarMenu>
     </NavbarContainer>
   );
 }

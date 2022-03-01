@@ -21,7 +21,7 @@ const HeroOverlay = styled.div`
   align-items: center;
 
   .heroTitle{
-    font-size: 1.97em;
+    font-size: 3.6vmin;
     width: 100%;
     padding: 13vh 0 .25em;
     color: white;

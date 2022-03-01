@@ -15,6 +15,15 @@ const PageStyle = styled.div`
   display:flex;
   flex-direction: column;
   background-color:white;
+  font-size: 14px;
+  
+  @media (max-width: 320px) {
+    width:320px;
+  }
+
+  @media (max-width: 768px) {
+    font-size:12px;
+  }
 `;
 
 class PageControl extends React.Component{
@@ -24,11 +33,14 @@ class PageControl extends React.Component{
     this.state = {
       pages: {'Home':'','About':'','Projects':'','Skills':'','Contact':''},
       activePage: 'Home',
-      contactDisplay: false
+      contactDisplay: false,
+      menuActive: false,  
     };
   }      
 
+  handleMenu = () => {
 
+  }
 
   handleClickContact= () => {
     this.setState(prevState => ({
