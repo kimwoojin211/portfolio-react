@@ -10,16 +10,14 @@ import Contact from './Contact';
 
 const PageStyle = styled.div`
   width:100%;
+  min-width: 320px;
   height:auto;
   color: #008080;
   display:flex;
   flex-direction: column;
   background:black;
   font-size: 14px;
-  
-  @media (max-width: 320px) {
-    width:320px;
-  }  
+
   @media (max-width: 768px) {
     font-size:12px;
   }

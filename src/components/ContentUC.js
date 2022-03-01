@@ -12,10 +12,10 @@ const ContentContainer = styled.div`
   color: white;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   font-size: 1.5vw;
 
   .pageTitle{
-    padding-top: 9vh;
     font-size: 3rem;
   }
 `;
@@ -42,6 +42,16 @@ const ContentLineWrapper = styled.div`
 
   h3{
     font-size: 1.2em;
+  }
+
+  @media (max-width: 768px) {
+    
+    h1{
+      font-size:4em;
+    }
+    h3{
+      font-size:1.5em;
+    }
   }
 `;
 
