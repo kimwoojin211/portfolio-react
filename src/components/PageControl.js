@@ -14,17 +14,22 @@ const PageStyle = styled.div`
   color: #008080;
   display:flex;
   flex-direction: column;
-  background-color:white;
+  background:black;
   font-size: 14px;
   
   @media (max-width: 320px) {
     width:320px;
-  }
-
+  }  
   @media (max-width: 768px) {
     font-size:12px;
   }
 `;
+
+const mobileView = styled.div`
+
+`;
+
+
 
 class PageControl extends React.Component{
   constructor(props){
@@ -38,34 +43,42 @@ class PageControl extends React.Component{
     };
   }      
 
-  handleMenu = () => {
-
-  }
-
-  handleClickContact= () => {
-    this.setState(prevState => ({
-      contactDisplay: !prevState.contactDisplay
-    }));
-  }
 
   handleClickNav= (page) => {
     if (page === 'Contact'){
+      console.log('Contact Contact');
       this.setState(prevState => ({
       contactDisplay: !prevState.contactDisplay}))
     }
+    else if (page === 'Menu'){
+      console.log('Menu Menu');
+      this.setState(prevState => ({
+      menuActive: !prevState.menuActive}))
+    }
     else {
-      this.setState({activePage: page});
+      
+      console.log(`${page} ${page}`);
+      this.setState({activePage: page, menuActive: false});
     }
   }
 
 
   render(){
-    const {pages, activePage, contactDisplay} = this.state;
+    const {pages, activePage, contactDisplay,menuActive} = this.state; 
+
+    const menuStyles = {
+        'menuDisplay': `${menuActive? 'flex' : 'none'}`,
+        'menuClass': `${menuActive? 'Menu active' : 'Menu'}`,
+        'mobileMenuOverlayColor' : `${menuActive? 'rgb(0,0,0,0.95)' : 'transparent'}`,
+        'mobileMenuOverlayHeight' : `${menuActive? '100vh' : '100%'}`,
+
+    }
+
     const pageClasses = {...pages, 
                           [`${activePage}`]:' active', 
                           'Contact': `${contactDisplay ? ' active':''}`
                         };
-    console.log({pageClasses});
+    console.log(`menu active ${menuActive}`);
     const DisplayPage = () => {
       switch(activePage){
 
@@ -90,7 +103,10 @@ class PageControl extends React.Component{
           activePage={activePage}
           pageClasses={pageClasses}
           onClickNav={this.handleClickNav}
-          onClickContact={this.handleClickContact}/>
+          menuDisplay={menuActive? 'flex' : 'none'}
+          menuClass= {menuActive? 'Menu active' : 'Menu'}
+          menuStyle= {menuStyles}
+          />
         <Contact ContactDisplayState={this.state.contactDisplay}/>
         {DisplayPage()}
         <Footer/>

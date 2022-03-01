@@ -43,7 +43,7 @@ const ContactWrapper = styled.div`
   right:.5vw;
   width:285px;
   height: 175px;
-  padding-right:15px;
+  padding-right:0.5vw;
 
  .contact-enter {
   height: 0;
@@ -83,7 +83,7 @@ const ContactBox = styled.div`
   borderStyle: solid;
   height: 100%;
   width: 100%;
-  padding: 27px 15px 0 0;
+  padding: 2vh 0 1vh 0;
   background:  rgb(0,0,0,0.64);
   border-radius:20px;
   border-color: white;

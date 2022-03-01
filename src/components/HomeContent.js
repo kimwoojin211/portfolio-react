@@ -29,6 +29,7 @@ const ContentTextStyle =styled.div`
   justify-content: center;
   padding: 0 2vw 0 2vw;
   min-width: 76%;
+  max-width: 100%;
 
   h1{
     text-align: center;

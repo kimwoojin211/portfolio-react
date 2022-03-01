@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ContactInfoStyle = styled.div`
   display: flex;
   height: 20%;
-  padding: 0 50px 5px 57px;
+  margin: 5px 0px 5px 47px;
 
   img{
       width: 36px;
@@ -15,9 +15,9 @@ const ContactInfoStyle = styled.div`
   a{
     font-family: sans-serif;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     align-self: center;
-    text-shadow: var(--text-shadow);
+    text-shadow: var(--text-shadow, none);
   }
   
   .usernameStyle{

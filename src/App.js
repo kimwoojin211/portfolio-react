@@ -6,8 +6,10 @@ import PageControl from "./components/PageControl";
 import './App.css';
 
 const AppContainer = styled.div`
-  width:100vw;
+  width:100%;
   height:auto;
+  
+  background:black;
 `
 
 export default function App() {
