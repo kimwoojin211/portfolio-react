@@ -44,6 +44,16 @@ const ContactWrapper = styled.div`
   width:285px;
   height: 175px;
   padding-right:0.5vw;
+  
+  @media (max-width: 525px) {
+    top:0;
+    right:0;
+    height:100vh;
+    width:100vw;
+    display:flex;
+
+
+  }
 
  .contact-enter {
   height: 0;
@@ -51,17 +61,17 @@ const ContactWrapper = styled.div`
   display: flex;
 }
 .contact-enter-active {
-  height: 175px;
+  height: 100%;
   opacity: 1;
   transition: opacity 1.4s, height 1s;
 }
 .contact-enter-done {
-  height: 175px;
+  height: 100%;
   opacity: 1;
   display: flex;
 }
 .contact-exit {
-  height: 175px;
+  height: 100%;
   opacity: 1;
   display: flex;
 }
@@ -79,8 +89,7 @@ const ContactWrapper = styled.div`
 
 //Contact box styling
 const ContactBox = styled.div`
-  borderWidth: 4px;
-  borderStyle: solid;
+
   height: 100%;
   width: 100%;
   padding: 2vh 0 1vh 0;
@@ -98,6 +107,13 @@ const ContactBox = styled.div`
   0px 0px 60px black;
   display:none;
   flex-direction: column;
+
+  
+  @media (max-width: 525px) {
+    background:  rgb(0,0,0,0.94);
+    align-items: center;
+    padding-top: 9vh;
+  }
 `;
 
 function Contact(props){
