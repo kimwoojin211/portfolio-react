@@ -1,21 +1,21 @@
 // src/App.js
 
 import React from "react";
-import About from "./pages/About";
-import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import Content from "./components/HomeContent";
-import Hero from "./components/HomeHero";
+import styled from "styled-components";
 import PageControl from "./components/PageControl";
+import './App.css';
+
+const AppContainer = styled.div`
+  width:100%;
+  height:auto;
+  
+  background:black;
+`
 
 export default function App() {
   return (
-    <main>
+    <AppContainer>
       <PageControl/>
-    </main>
+    </AppContainer>
   );
 }

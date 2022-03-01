@@ -10,35 +10,50 @@ const ContentContainer = styled.div`
   height: 100vh;  
   align-items: center;
   padding-top: 4vh;
+  font-size: 1.5vmax;
 `;
 
 const ContentBannerWrapper = styled.div`
   display:flex;
   background-color: rgba(255, 206, 83, 0.442);
-  height: 55%;
+  height: 55vh;
   width: 100%;  
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 const ContentTextStyle =styled.div`
   flex-flow: column;
-  margin-left: 3vw;
-  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vw 0 2vw;
+  min-width: 76%;
+  max-width: 100%;
 
   h1{
     text-align: center;
-    font-size: 4.2rem;
+    padding-bottom: 3vh;
+    font-size: 1.8em;
+  }
+
+  h3{
+    font-size: 1.2em;
   }
 `;
 
-const ProfilePic = styled.img`
+const ProfilePic = styled.div`
+    max-width:23vmax;
+    padding: 0 1.7vw 0 1.7vw;
+
+    img{
     border: solid;
     border-width: 2px;
     border-color: white;
     border-radius: 100%;
-    width:450px;
-    height:450px;
+    width:100%;
+    height:100%;
+    }
 `
 
 function HomeContent(){
@@ -52,7 +67,9 @@ function HomeContent(){
             <h3>Connect with me! Click on "Contact" for the best way to get in touch!</h3>
 
           </ContentTextStyle>
-          <ProfilePic src={Image} alt="Headshot of Woo Jin Kim"/>
+          <ProfilePic>
+            <img src={Image} alt="Headshot of Woo Jin Kim"/>
+          </ProfilePic>
         </ContentBannerWrapper>
       </ContentContainer>
   );

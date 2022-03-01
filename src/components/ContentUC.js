@@ -12,22 +12,18 @@ const ContentContainer = styled.div`
   color: white;
   align-items: center;
   flex-direction: column;
-  font-size: 3rem;
-  
-  h1{
-    font-size: 4rem;
-  }
+  justify-content: center;
+  font-size: 1.5vw;
 
   .pageTitle{
-    padding-top: 5vh;
-    font-size: 4.3rem;
+    font-size: 3rem;
   }
 `;
 
 const ContentBannerWrapper = styled.div`
   display:flex;
   background-color: var(--background-color);
-  height: 55%;
+  height: 55vmin;
   width: 100%;  
   align-items: center;
   justify-content: center;
@@ -38,9 +34,25 @@ const ContentBannerWrapper = styled.div`
 const ContentLineWrapper = styled.div`
   flex-flow: column;
   margin-left: 3vw;
-  font-size: 1.7rem;
   color: var(--color);
 
+  h1{
+    font-size: 2.1em;
+  }
+
+  h3{
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 768px) {
+    
+    h1{
+      font-size:4em;
+    }
+    h3{
+      font-size:1.5em;
+    }
+  }
 `;
 
 const ContentLine = styled.h3`
