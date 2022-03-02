@@ -118,7 +118,6 @@ const NavbarMenu = styled.div`
 function Navbar(props){
   const {onClickNav, pageClasses} = props;
   const {menuDisplay, menuClass, mobileMenuOverlayColor, mobileMenuOverlayHeight} = props.menuStyle;
-  console.log(`menu Display ${menuDisplay}`);
 
   function handleClick(event,page){
     event.preventDefault();

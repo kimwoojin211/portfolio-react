@@ -27,7 +27,6 @@ const PageStyle = styled.div`
 class PageControl extends React.Component{
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
       pages: {'Home':'','About':'','Projects':'','Skills':'','Contact':''},
       activePage: 'Home',
@@ -39,19 +38,18 @@ class PageControl extends React.Component{
 
   handleClickNav= (page) => {
     if (page === 'Menu'){ // mobile mode, screen is <525px wide;
-    console.log('Menu Menu');
       this.setState(prevState => ({
       menuActive: !prevState.menuActive, contactDisplay: false}))
     }
     else if (page === 'Contact'){
-      console.log('Contact Contact');
       this.setState(prevState => ({
       contactDisplay: !prevState.contactDisplay, menuActive: false}))
     }
     else {
-      
-      console.log(`${page} ${page}`);
-      this.setState({activePage: page, menuActive: false, contactDisplay:false});
+      if(this.state.menuActive){
+        this.setState({contactDisplay:false, menuActive: false});
+      }
+      this.setState({activePage: page});
     }
   }
 
@@ -71,7 +69,7 @@ class PageControl extends React.Component{
                           [`${activePage}`]:' active', 
                           'Contact': `${contactDisplay ? ' active':''}`
                         };
-    console.log(`menu active ${menuActive}`);
+                        
     const DisplayPage = () => {
       switch(activePage){
 
@@ -96,8 +94,6 @@ class PageControl extends React.Component{
           activePage={activePage}
           pageClasses={pageClasses}
           onClickNav={this.handleClickNav}
-          menuDisplay={menuActive? 'flex' : 'none'}
-          menuClass= {menuActive? 'Menu active' : 'Menu'}
           menuStyle= {menuStyles}
           />
         <Contact ContactDisplayState={this.state.contactDisplay}/>
