@@ -104,6 +104,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+## Acknowledgements
+
+* Thank you to [Kaizzo](https://codepen.io/Kaizzo) on CodePen for the [Final Fantasy themed dialogue box CSS](https://codepen.io/Kaizzo/pen/aGWwMM) in the Projects page.
+
 ## License
 
 _MIT_
