@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentUC from '../components/ContentUC';
-import SkillBackground from '../img/palmsprings.jpg';
+import ShopBackground from '../img/palmsprings.jpg';
 
 const line1 = {
   'text':'Some fun facts:',
@@ -40,29 +40,29 @@ const line5 = {
 
   const lines = [line1, line2, line3, line4, line5];
 
-const SkillStyle = styled.div`
+const ShopStyle = styled.div`
   width:100%;
   height:100vh;
-  background-image: url(${SkillBackground});
+  background-image: url(${ShopBackground});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   };
 `;
 
-function Skills(){
+function Shop(){
 
   return(
-    <SkillStyle>
+    <ShopStyle>
       <ContentUC
         lines = {lines}
-        title = 'Skills'
+        title = 'Shop'
         bannerColor = 'rgb(127, 127, 112, 0.42)'
         lineTextColor = ''
         lineLinkColor = 'yellow'
         />
-    </SkillStyle>
+    </ShopStyle>
   );
 }
 
-export default Skills;
+export default Shop;
