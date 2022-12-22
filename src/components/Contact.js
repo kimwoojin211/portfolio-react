@@ -52,7 +52,7 @@ const ContactWrapper = styled.div`
   position: fixed;
   top:7vh;
   right:.5vw;
-  width:285px;
+  width: 285px;
   height: 175px;
   padding-right:0.5vw;
   

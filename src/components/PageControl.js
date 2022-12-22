@@ -25,6 +25,7 @@ const PageStyle = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 14px;
+  
 
   @media (max-width: 768px) {
     font-size:12px;

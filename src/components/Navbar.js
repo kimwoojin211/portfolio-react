@@ -107,6 +107,7 @@ const NavbarMenu = styled.div`
   align-items: center;
   padding: 2vw 1vw 0 0;
   z-index:2;
+  
 
   @media (max-width: 525px) {
     display: flex;
