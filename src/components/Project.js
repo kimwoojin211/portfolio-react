@@ -177,13 +177,15 @@ function Project(props){
 
   // const variables = ["projectTitle", "siteURL", "mainLanguage", "mainLanguageImage", "projectImgSrc", "summary"];
   // let props = mllProps;
-  const {projectTitle, siteURL, mainLanguage, mainLanguageImg, projectImgSrc, summary} = props;
+  const {projectTitle, siteURL, mainLanguage, mainLanguageImg, projectImgSrc, summary, summaryExtended, projectDetails, projectTools, projectChanges } = props;
   return (
     <ProjectStyle>
       <div className="projectCard ff7Style">
         <div className="projectSection projectHeader row ff7Style">
           <h3 className="projectTitle">
-            <a href={siteURL}>{projectTitle}</a>
+            <a href={siteURL} rel="noopener noreferrer" target="_blank">
+              {projectTitle}
+            </a>
           </h3>
           <img
             className="projectLanguages mainLanguage"
@@ -203,21 +205,29 @@ function Project(props){
           <h5>{summary}</h5>
         </div>
         <div className="projectSection projectDetails">
-          <ProjectInfoBox />
+          <ProjectInfoBox 
+            projectInfo={projectDetails}/>
         </div>
         <div className="ff7Style projectButtonContainer row">
-          <div className=" projectButton">
-            <h4 clasName="buttonText">Details</h4>
+          <div className="projectButton">
+            <h4 className="buttonText">Details</h4>
           </div>
-          <div className=" projectButton">
-            <h4 clasName="buttonText">Tools</h4>
+          <div className="projectButton">
+            <h4 className="buttonText">Tools</h4>
           </div>
-          <div className=" projectButton">
-            <h4 clasName="buttonText">Changes</h4>
+          <div className="projectButton">
+            <h4 className="buttonText">Changes</h4>
           </div>
-          <div className=" projectButton">
-            <h4 clasName="buttonText">Github</h4>
-          </div>
+          <a
+            href="https://www.github.com/kimwoojin211/MyLocalLocals"
+            className="projectButton"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {/* <div className="projectButton"> */}
+            <h4 className="buttonText">Github</h4>
+            {/* </div> */}
+          </a>
         </div>
       </div>
     </ProjectStyle>

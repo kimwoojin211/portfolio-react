@@ -15,15 +15,105 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
     projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
     summary:
       "This browser app allows gamers who compete in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
+    summaryExtended: "",
+    projectDetails: [
+      {
+        sectionTitle: "Details",
+        listItems: [
+          `Searches for upcoming tournaments using Google Maps API & Start.GG's GraphQL API`,
+          "Display all tournaments from search result in a scrollable list",
+          "Filter results by game, date, or distance from searched address",
+          "Show details of tournament on selection, including date, location, and all events",
+          "Sort tournament search results by either date or distance from searched address",
+        ],
+      },
+    ],
+    projectTools: [
+      {
+        sectionTitle: "Languages",
+        listItems: ["Javascript", "CSS", "HTML", "GraphQL"],
+      },
+      {
+        sectionTitle: "Frameworks/Libraries/Interfaces",
+        listItems: [
+          "React.js",
+          "Next.js",
+          "ApolloClient",
+          "Start.GG API",
+          "Google Maps API",
+          "Bootstrap",
+        ],
+      },
+      {
+        sectionTitle: "Packages/Plugins/Tools",
+        listItems: [
+          "react-dom",
+          "react-geocode",
+          "react-scripts",
+          "react-datepicker",
+          "google-map-react",
+          "@react-google-maps/api",
+        ],
+      },
+    ],
+    projectChanges: [
+      {
+        sectionTitle: "Version v0.0.1",
+        listItems: ["Added a background"],
+      },
+    ],
   };
+
   const tenCTProps = {
     projectTitle: "10CTControllers",
     siteURL: "https://10ctcontrollers.com",
     mainLanguage: "Javascript",
     mainLanguageImg: Javascript,
     projectImgSrc: TenCT,
-    summary: "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
+    summary:
+      "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
+    summaryExtended: "",
+    projectDetails: [
+      {
+        sectionTitle: "Details",
+        listItems: [
+          `Homepage features a hero section with smooth slideshow carousel highlighting business products`,
+          "Fluid transitions between pages using HashRouters from react-router-dom",
+          "Features list of modifications that display tooltip descriptions and images on hover",
+          "Interactive FAQ page that displays answers to questions on click",
+          "Twitter testimonial slideshow autoplays at bottom of webpage",
+        ],
+      },
+    ],
+    projectTools: [
+      {
+        sectionTitle: "Languages",
+        listItems: ["Javascript", "CSS", "HTML"],
+      },
+      {
+        sectionTitle: "Frameworks/Libraries/Interfaces",
+        listItems: ["React.js", "react-twitter-embed"],
+      },
+      {
+        sectionTitle: "Packages/Plugins/Tools",
+        listItems: [
+          "react-dom",
+          "react-router-dom",
+          "react-scripts",
+          "react-slideshow-image",
+          "react-tooltip",
+          "@react-google-maps/api",
+        ],
+      },
+    ],
+    projectChanges: [
+      {
+        sectionTitle: "Version v0.0.1",
+        listItems: ["Added a background"],
+      },
+    ],
   };
+
   //summaryExpanded: "10CTControllers provides modification & repair services for competitors looking for the"
 
 const ProjectPageStyle = styled.div`

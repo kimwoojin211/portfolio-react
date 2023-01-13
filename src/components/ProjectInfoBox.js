@@ -58,42 +58,60 @@ const ProjectInfoBoxContainer = styled.div`
 
 
 
-  const info = [
-    {
-      listTitle: "Details",
-      listItems: [
-        `Searches for upcoming tournaments using Google Maps API & Start.GG's GraphQL API`,
-        "Display all tournaments from search result in a scrollable list",
-        "Filter results by game, date, or distance from searched address",
-        "Show details of tournament on selection, including date, location, and all events",
-        "Sort tournament search results by either date or distance from searched address",
-      ],
-    },
-  ];
-  const info2 = [
-    {
-      listTitle: "Languages",
-      listItems: ["Javascript", "CSS", "HTML"],
-    },
-    {
-      listTitle: "Frameworks/Libraries",
-      listItems: ["React.JS", "someother", "stuff"],
-    },
-    {
-      listTitle: "Plugins/Tools",
-      listItems: ["some", "stuff", "ok"],
-    },
-  ];
+  // const info = [
+  //   {
+  //     listTitle: "Details",
+  //     listItems: [
+  //       `Searches for upcoming tournaments using Google Maps API & Start.GG's GraphQL API`,
+  //       "Display all tournaments from search result in a scrollable list",
+  //       "Filter results by game, date, or distance from searched address",
+  //       "Show details of tournament on selection, including date, location, and all events",
+  //       "Sort tournament search results by either date or distance from searched address",
+  //     ],
+  //   },
+  // ];
+  // const info2 = [
+  //   {
+  //     listTitle: "Languages",
+  //     listItems: ["Javascript", "CSS", "HTML"],
+  //   },
+  //   {
+  //     listTitle: "Frameworks/Libraries",
+  //     listItems: ["React.JS", "someother", "stuff"],
+  //   },
+  //   {
+  //     listTitle: "Plugins/Tools",
+  //     listItems: ["some", "stuff", "ok"],
+  //   },
+  // ];
 
 
 function ProjectInfoBox(props){
-   
+  const { projectInfo } = props;
 
-  const infolist = [info, info2];
+  // const infolist = [info, info2];
   
   return (
     <ProjectInfoBoxContainer>
       {
+        projectInfo.map((info,i) => {
+          return (
+            <div>
+              <h5>{info.sectionTitle}</h5>
+              <ul>
+              {
+                info.listItems.map((item,index) => {
+                  return (<li>{item}</li>);
+                })
+              }
+              </ul>
+            </div>
+          );
+          
+        })
+      }
+
+      {/* {
         info.map((infoList,i) => {
           return (
             <div>
@@ -109,7 +127,7 @@ function ProjectInfoBox(props){
           );
           
         })
-      }
+      } */}
     </ProjectInfoBoxContainer>
   );
 }
