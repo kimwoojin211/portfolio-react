@@ -10,55 +10,50 @@ import styled from "styled-components";
 // Changes
 //  Version number
 const ProjectInfoBoxContainer = styled.div`
-  display: none;
   width: 95%;
-  height: 20vh;
-  font-size: 0.57125rem;
-  margin: 0 auto;
+  height: 10rem;
+  font-size: 0.565rem;
+  margin: 0.5rem 0.75rem !important;
+  padding: 0.25rem;
 
   border: solid 1px #424542;
-  box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
-    -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
-  margin: 1px auto;
-  padding: 0.27rem;
+  box-shadow: 1px 1px #848484, -1px -1px #848484, 1px -1px #848484,
+    -1px 1px #848484, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
 
-  background: #04009d;
-  background: -moz-linear-gradient(top, #04009d 0%, #06004d 100%);
+  background: #000028;
+  background: -moz-linear-gradient(top, #000028 0%, #06004d 100%);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    color-stop(0%, #04009d),
+    color-stop(0%, #000028),
     color-stop(100%, #06004d)
   );
-  background: -webkit-linear-gradient(top, #04009d 0%, #06004d 100%);
-  background: -o-linear-gradient(top, #04009d 0%, #06004d 100%);
-  background: -ms-linear-gradient(top, #04009d 0%, #06004d 100%);
-  background: linear-gradient(to bottom, #04009d 0%, #06004d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );
+  background: -webkit-linear-gradient(top, #000028 0%, #06004d 100%);
+  background: -o-linear-gradient(top, #000028 0%, #06004d 100%);
+  background: -ms-linear-gradient(top, #000028 0%, #06004d 100%);
+  background: linear-gradient(to bottom, #000028 0%, #06004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000028', endColorstr='#06004d',GradientType=0 );
 
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
 
   overflow: scroll;
-  
-  h5{
-    font-size: 0.75rem;
-    margin: 0.5rem auto;
-  }
 
+  h5 {
+    font-size: 0.76125rem;
+    margin-left: 0.4rem !important;
+  }
 
   ul {
     text-align: left;
-    padding-inline-start: 17px;
+    padding-inline-start: 15px;
   }
 
-  li{
-    margin-bottom: 0.3rem;
+  li {
+    margin: 4px 3px !important;
   }
-
-
 `;
 
 

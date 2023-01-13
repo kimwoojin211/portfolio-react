@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import MyLocalLocals from "../img/mylocallocals.png";
-import ProjectInfoBox from "./ProjectInfoBox.js";
+import TenCT from "../img/10CT.png"
 import Javascript from "../img/logos/javascriptLogo.png";
+import ProjectInfoBox from "./ProjectInfoBox.js";
 
 
 const ProjectStyle = styled.div`
@@ -64,9 +65,13 @@ const ProjectStyle = styled.div`
     max-height: 80vh;
   }
 
-  .projectSection:not(:last-child) {
+  .projectSection {
     margin: 0rem !important;
   }
+
+  // .projectSection:not(:last-child) {
+  //   margin: 0rem !important;
+  // }
 
   .projectHeader {
     width: 100%;
@@ -88,28 +93,29 @@ const ProjectStyle = styled.div`
   }
 
   .projectImgWrapper {
-    margin:0.2rem auto !important;
+    margin:0;
   }
 
   .projectImg {
     width: 100%;
     height: 100%;
+    margin-bottom: 0;
   }
   
   
   .projectSummary h5{
-    font-size: 0.57125rem;
+    font-size: 0.59125rem;
     text-align: left;
     margin: 0.5rem !important;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 
   }
 
   .projectButtonContainer {
-    padding: 0.17rem 0.1rem 0.24rem 0.1rem;
+    padding: 0.3rem 0.1rem;
     margin: 0;
   }
 
@@ -117,9 +123,9 @@ const ProjectStyle = styled.div`
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    margin: 0 0.1rem;
+    margin: 0 0.15rem;
     padding: 0.2rem 0;
-    box-shadow: 0.75px 0.75px white, -0.1px -0.5px #757575;
+    box-shadow: 0.75px 0.75px white, -0.5px -0.5px #c1c1c1;
     border-radius: 0.3rem;
   }
 
@@ -128,10 +134,12 @@ const ProjectStyle = styled.div`
   }
 
   .projectDetails{
-    margin:0 auto;
     display:flex;
     flex-direction:row;
     justify-content:center;
+    background: #06004d;
+    z-index:-1;
+    margin:3px 0 !important;
   }
 
   .buttonText {
@@ -142,50 +150,62 @@ const ProjectStyle = styled.div`
     width=100%;
   }
 `;
-  const mllProps = {
-    projectTitle: "My Local Locals",
-    siteURL: "https://my-local-locals.vercel.app",
-    mainLanguage: "Javascript",
-    mainLanguageImage: Javascript, // "../img/logos/javascriptLogo.png"
-    projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
-    summary:
-      "This browser app allows gamers who compete in platform fightingvideo games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
-  };
-  
 
-function Project(){
+
+  // const mllProps = {
+  //   projectTitle: "My Local Locals",
+  //   siteURL: "https://my-local-locals.vercel.app",
+  //   mainLanguage: "Javascript",
+  //   mainLanguageImg: Javascript, // "../img/logos/javascriptLogo.png"
+  //   projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
+  //   summary:
+  //     "This browser app allows gamers who compete in platform fightingvideo games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
+  // };
+  // const tenCTProps = {
+  //   projectTitle: "10CTControllers",
+  //   siteURL: "https://10ctcontrollers.com",
+  //   mainLanguage: "Javascript",
+  //   mainLanguageImg: Javascript,
+  //   projectImgSrc: TenCT,
+  //   summary: "A website made for 10CTControllers, a Nintendo Gamecube controller modification business in the competitive Smash Brothers Melee community.",
+  // };
+  // //summaryExpanded: "10CTControllers provides modification & repair services for competitors looking for the"
+
+
+  
+function Project(props){
 
   // const variables = ["projectTitle", "siteURL", "mainLanguage", "mainLanguageImage", "projectImgSrc", "summary"];
-  let props = mllProps;
-
+  // let props = mllProps;
+  const {projectTitle, siteURL, mainLanguage, mainLanguageImg, projectImgSrc, summary} = props;
   return (
     <ProjectStyle>
       <div className="projectCard ff7Style">
-        <div className=" projectSection projectHeader row ff7Style">
+        <div className="projectSection projectHeader row ff7Style">
           <h3 className="projectTitle">
-            <a href="https://my-local-locals.vercel.app">My Local Locals</a>
+            <a href={siteURL}>{projectTitle}</a>
           </h3>
-          <img className="projectLanguages mainLanguage" src={Javascript} alt="Javascript" />
+          <img
+            className="projectLanguages mainLanguage"
+            src={mainLanguageImg}
+            alt={mainLanguage}
+          />
         </div>
 
         <div className="projectSection projectImgWrapper">
           <img
             className="projectImg"
-            src={MyLocalLocals}
-            alt="My Local Locals"
+            src={projectImgSrc}
+            alt={projectTitle}
           ></img>
         </div>
         <div className="projectSection projectSummary ff7Style">
-          <h5>
-            This browser app allows gamers who compete in platform fighting
-            video games (such as Super Smash Brothers) to search for tournaments
-            local to a requested search location.
-          </h5>
+          <h5>{summary}</h5>
         </div>
-        {/* <div className="projectSection projectDetails  hidden">
+        <div className="projectSection projectDetails">
           <ProjectInfoBox />
-        </div> */}
-        {/* <div className="ff7Style projectButtonContainer row">
+        </div>
+        <div className="ff7Style projectButtonContainer row">
           <div className=" projectButton">
             <h4 clasName="buttonText">Details</h4>
           </div>
@@ -198,7 +218,7 @@ function Project(){
           <div className=" projectButton">
             <h4 clasName="buttonText">Github</h4>
           </div>
-        </div> */}
+        </div>
       </div>
     </ProjectStyle>
   );

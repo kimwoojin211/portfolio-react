@@ -53,7 +53,7 @@ a{
     padding-left: 20px;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     font-size: 3vw;
     justify-content: space-between;
 

@@ -3,7 +3,28 @@ import styled from 'styled-components';
 import Project from '../components/Project';
 import {Carousel} from 'react-responsive-carousel';
 import MyLocalLocals from '../img/mylocallocals.png';
+import TenCT from "../img/10CT.png";
+import Javascript from "../img/logos/javascriptLogo.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+  const mllProps = {
+    projectTitle: "My Local Locals",
+    siteURL: "https://my-local-locals.vercel.app",
+    mainLanguage: "Javascript",
+    mainLanguageImg: Javascript, // "../img/logos/javascriptLogo.png"
+    projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
+    summary:
+      "This browser app allows gamers who compete in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
+  };
+  const tenCTProps = {
+    projectTitle: "10CTControllers",
+    siteURL: "https://10ctcontrollers.com",
+    mainLanguage: "Javascript",
+    mainLanguageImg: Javascript,
+    projectImgSrc: TenCT,
+    summary: "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
+  };
+  //summaryExpanded: "10CTControllers provides modification & repair services for competitors looking for the"
 
 const ProjectPageStyle = styled.div`
   width: 100%;
@@ -33,6 +54,11 @@ const ProjectPageStyle = styled.div`
 
   .projectContainer {
     margin: 0 auto;
+
+    
+  @media (min-width: 760px) {
+    display:flex;
+    flex-direction:row;
   }
   
 
@@ -62,18 +88,17 @@ function Projects(){
       <h1 className="pageTitle">Projects</h1>
       <div className="projectsPageBody">
         <div className="projectContainer">
-          <h2 className="projectCategoryTitle">Community Projects</h2>
-          <Carousel centerMode={true} centerSlidePercentage={80}>
-            <Project />
-            <Project />
-            <Project />
-          </Carousel>
+          {/* <h2 className="projectCategoryTitle">Community Projects</h2> */}
+          {/* <Carousel centerMode={true} centerSlidePercentage={80}> */}
+            <Project {...mllProps} />
+            <Project {...tenCTProps} />
+          {/* </Carousel> */}
 
-          <h2 className="projectCategoryTitle">Personal Projects</h2>
+          {/* <h2 className="projectCategoryTitle">Bootcamp Projects</h2>
           <Carousel>
             <Project />
             <Project />
-          </Carousel>
+          </Carousel> */}
           {/* <div className="projectCardSlideshow row">
             <div className="projectCard hidden">
               <div className="projectHeader row">
