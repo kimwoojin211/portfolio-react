@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroBackground from '../img/IMG_0730-2.jpg';
+import HeroBackground from '../img/backgrounds/IMG_0730-2.jpg';
 
 const HeroContainer = styled.div`
   background: grey;

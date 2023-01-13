@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentUC from '../components/ContentUC';
-import ShopBackground from '../img/palmsprings.jpg';
+import ShopBackground from '../img/backgrounds/palmsprings.jpg';
 
 const line1 = {
   'text':'Some fun facts:',

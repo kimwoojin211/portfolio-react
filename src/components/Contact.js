@@ -130,23 +130,23 @@ const ContactBox = styled.div`
 function Contact(props){
   const {ContactDisplayState} = props; //bool to toggle contact box visibility
 
-  return(
-    <ContactWrapper>
+  return (
+    <ContactWrapper style={{ display: "none" }}>
       <CSSTransition
-        in={ContactDisplayState} 
-        timeout={{enter:950, exit:400}} 
-        classNames='contact'>
+        in={ContactDisplayState}
+        timeout={{ enter: 950, exit: 400 }}
+        classNames="contact"
+      >
         <ContactBox>
-          {contactArray.map((contact,i) =>
-              <ContactInfo
-                  key={i}
-                  iconSrcURL = {contact.iconSrcURL}
-                  redirectURL = {contact.redirectURL}
-                  username = {contact.username}
-                  color = {contact.color}
-              />
-            )
-          }
+          {contactArray.map((contact, i) => (
+            <ContactInfo
+              key={i}
+              iconSrcURL={contact.iconSrcURL}
+              redirectURL={contact.redirectURL}
+              username={contact.username}
+              color={contact.color}
+            />
+          ))}
         </ContactBox>
       </CSSTransition>
     </ContactWrapper>

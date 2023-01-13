@@ -129,7 +129,8 @@ function Navbar(props){
     <NavbarContainer style={{
       '--mobile-menu-display': menuDisplay,
       '--mobile-menu-overlay-color': mobileMenuOverlayColor,
-      '--mobile-menu-overlay-height': mobileMenuOverlayHeight}}>
+      '--mobile-menu-overlay-height': mobileMenuOverlayHeight,
+      'display':'none'}}>
       <NavbarOverlay>
         { Object.entries(pageClasses).map(([key,value]) => 
             <a href='/' className={key + value} onClick={(e) => handleClick(e,key)}>{key}</a>) 

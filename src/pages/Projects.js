@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Project from '../components/Project';
+import {Carousel} from 'react-responsive-carousel';
 import MyLocalLocals from '../img/mylocallocals.png';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProjectPageStyle = styled.div`
   width: 100%;
@@ -20,7 +22,6 @@ const ProjectPageStyle = styled.div`
   .projectsPageBody {
     width: 90%;
     margin: 0 auto;
-    border: 1px solid white;
   }
 
   .pageTitle {
@@ -32,92 +33,26 @@ const ProjectPageStyle = styled.div`
 
   .projectContainer {
     margin: 0 auto;
-    border: 1px solid yellow;
   }
+  
+
 
   .projectCategoryTitle {
     margin: 1.3rem 0.8rem;
     font-size: 1.5rem;
-    border: 1px solid purple;
   }
 
   .projectCardSlideshow {
     margin: 1rem auto;
-    border: 1px solid blue;
+    overflow: hidden;
   }
 
-  .projectCard {
-    border: 1px solid pink;
-    min-width: 125px;
-    width: 70%;
-    margin: 0 auto;
-    max-height: 40vh;
-    
+  .thumbs-wrapper {
+    display: none;
   }
 
-  .projectHeader {
-    text-align: center;
-    font-size: 1.3rem;
-    border: 1px solid red;
-  }
-
-  .projectTitle {
-    margin: 0.3rem auto;
-    font-size: 1rem;
-  }
-
-  .projectImgWrapper {
-
-  }
-
-  .projectImg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .projectSummary {
-    font-size: 0.76rem;
-    margin: 0 auto;
-    text-overflow: ellipsis;
-    
-  }
-
-  .ff7Style {
-    border: solid 1px #424542;
-    box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
-      -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
-    margin: 0;
-    padding: 0.25rem;
-
-    background: #04009d;
-    background: -moz-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0%, #04009d),
-      color-stop(100%, #06004d)
-    );
-    background: -webkit-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -o-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -ms-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: linear-gradient(to bottom, #04009d 0%, #06004d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );
-
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-  }
-
-  .ff7Style * {
-    color: #eff1ff;
-    text-shadow: 2px 2px #212421, 1px 1px #212021;
-    font-family: Verdana, sans-serif;
-    font-weight: normal;
-    font-size: 0.55rem;
-    margin: 5px 0;
-    line-height: 1.3;
-    text-decoration: none;
+  .control-dots{
+    margin-top: 3rem;
   }
 `;
 
@@ -127,9 +62,20 @@ function Projects(){
       <h1 className="pageTitle">Projects</h1>
       <div className="projectsPageBody">
         <div className="projectContainer">
-          <h2 className="projectCategoryTitle">Category Title</h2>
-          <div className="projectCardSlideshow row">
-            <div className="projectCard">
+          <h2 className="projectCategoryTitle">Community Projects</h2>
+          <Carousel centerMode={true} centerSlidePercentage={80}>
+            <Project />
+            <Project />
+            <Project />
+          </Carousel>
+
+          <h2 className="projectCategoryTitle">Personal Projects</h2>
+          <Carousel>
+            <Project />
+            <Project />
+          </Carousel>
+          {/* <div className="projectCardSlideshow row">
+            <div className="projectCard hidden">
               <div className="projectHeader row">
                 <h3 className="projectTitle">My Local Locals</h3>
                 <img className="projectLanguages mainLanguage"></img>
@@ -171,12 +117,7 @@ function Projects(){
                 <ul className="projectDescription">
                   <li>
                     Searches for upcoming tournaments based on user's address
-                    input, using{" "}
-                    <a href="https://developers.google.com/maps">
-                      Google Maps API
-                    </a>{" "}
-                    & <a href="https://start.gg">Start.GG's</a> GraphQL{" "}
-                    <a href="https://developer.start.gg/docs/intro/">API</a>
+                    input, using <a href="https://developers.google.com/maps">Google Maps API</a> & <a href="https://start.gg">Start.GG's</a> GraphQL <a href="https://developer.start.gg/docs/intro/">API</a>
                   </li>
                   <li>
                     Display all tournaments from search result in a scrollable
@@ -218,7 +159,7 @@ function Projects(){
               <div className="projectFeatureButton">Changes</div>
               <div className="projectFeatureButton">Github</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </ProjectPageStyle>

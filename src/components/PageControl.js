@@ -7,10 +7,10 @@ import Shop from '../pages/Shop';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Contact from './Contact';
-import HomeBackground from "../img/IMG_0730-2.jpg";
-import AboutBackground from "../img/beach.jpg";
-import ProjectsBackground from "../img/lake.jpg";
-import ShopBackground from "../img/palmsprings.jpg";
+import HomeBackground from "../img/backgrounds/IMG_0730-2.jpg";
+import AboutBackground from "../img/backgrounds/beach.jpg";
+import ProjectsBackground from "../img/backgrounds/lake.jpg";
+import ShopBackground from "../img/backgrounds/palmsprings.jpg";
 
 
 const PageStyle = styled.div`
@@ -111,7 +111,8 @@ class PageControl extends React.Component{
         return <Shop/>;
 
       default:
-        return <Home/>;
+        return <Projects />;
+        // return <Home/>;
       //return <404 />;
     }
   };
@@ -124,9 +125,9 @@ class PageControl extends React.Component{
           onClickNav={this.handleClickNav}
           menuStyle= {menuStyles}
           />
-        <Contact ContactDisplayState={this.state.contactDisplay}/>
+        <Contact ContactDisplayState={this.state.contactDisplay} />
         {DisplayPage()}
-        <Footer/>
+        {/* <Footer/> */}
       </PageStyle>
     )
   }
