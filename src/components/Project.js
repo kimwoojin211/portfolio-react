@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MyLocalLocals from "../img/mylocallocals.png";
 import TenCT from "../img/10CT.png"
 import Javascript from "../img/logos/javascriptLogo.png";
-import ProjectInfoBox from "./ProjectInfoBox.js";
+import InfoBox from "./InfoBox.js";
 
 
 const ProjectStyle = styled.div`
@@ -205,7 +205,7 @@ function Project(props){
           <h5>{summary}</h5>
         </div>
         <div className="projectSection projectDetails">
-          <ProjectInfoBox 
+          <InfoBox 
             projectInfo={projectDetails}/>
         </div>
         <div className="ff7Style projectButtonContainer row">

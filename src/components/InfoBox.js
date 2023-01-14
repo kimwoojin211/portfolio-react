@@ -9,37 +9,66 @@ import styled from "styled-components";
 //  Plugins & Tools
 // Changes
 //  Version number
-const ProjectInfoBoxContainer = styled.div`
-  width: 95%;
-  height: 10rem;
+
+
+const InfoBoxContainer = styled.div`
+  width: 100%;
   font-size: 0.565rem;
-  margin: 0.5rem 0.75rem !important;
-  padding: 0.25rem;
+  margin: 0.4rem 0.7rem !important;
+  padding: 0.2rem;
 
   border: solid 1px #424542;
-  box-shadow: 1px 1px #848484, -1px -1px #848484, 1px -1px #848484,
-    -1px 1px #848484, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
+  box-shadow: 1px 1px #a0a0a0, -1px -1px #a0a0a0, 1px -1px #a0a0a0,
+    -1px 1px #a0a0a0, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542,
+    1px 1px 5px #555 inset, -1px 1px 5px #555 inset;
 
-  background: #000028;
-  background: -moz-linear-gradient(top, #000028 0%, #06004d 100%);
+  background: #000030;
+  background: -moz-linear-gradient(top, #000030 0%, #040049 100%);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    color-stop(0%, #000028),
-    color-stop(100%, #06004d)
+    color-stop(0%, #000030),
+    color-stop(100%, #040049)
   );
-  background: -webkit-linear-gradient(top, #000028 0%, #06004d 100%);
-  background: -o-linear-gradient(top, #000028 0%, #06004d 100%);
-  background: -ms-linear-gradient(top, #000028 0%, #06004d 100%);
-  background: linear-gradient(to bottom, #000028 0%, #06004d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000028', endColorstr='#06004d',GradientType=0 );
+  background: -webkit-linear-gradient(top, #000030 0%, #040049 100%);
+  background: -o-linear-gradient(top, #000030 0%, #040049 100%);
+  background: -ms-linear-gradient(top, #000030 0%, #040049 100%);
+  background: linear-gradient(to bottom, #000030 0%, #040049 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000030', endColorstr='#040049',GradientType=0 );
 
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
 
-  overflow: scroll;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  // ::-webkit-scrollbar {
+  //   width: 15px;
+  //   background-color: white;
+  // }
+
+  // ::-webkit-scrollbar-thumb {
+  //   background-color: skyblue;
+  //   border-radius: 5rem;
+  // }
+`;
+
+const InfoBoxWrapper = styled.div`
+  // border: 1px solid red;
+  height: 10rem;
+  overflow-y: scroll;
+  // padding-right: 10px;
+
+  scrollbar-width: 5px; /* Firefox */
+  scrollbar-color: #595959  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 
   h5 {
     font-size: 0.76125rem;
@@ -54,8 +83,17 @@ const ProjectInfoBoxContainer = styled.div`
   li {
     margin: 4px 3px !important;
   }
-`;
 
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #595959;
+    border-radius: 2rem;
+  }
+`;
 
 
   // const info = [
@@ -86,30 +124,27 @@ const ProjectInfoBoxContainer = styled.div`
   // ];
 
 
-function ProjectInfoBox(props){
+function InfoBox(props){
   const { projectInfo } = props;
 
   // const infolist = [info, info2];
   
   return (
-    <ProjectInfoBoxContainer>
-      {
-        projectInfo.map((info,i) => {
+    <InfoBoxContainer>
+      <InfoBoxWrapper>
+        {projectInfo.map((info, i) => {
           return (
-            <div>
+            <React.Fragment>
               <h5>{info.sectionTitle}</h5>
               <ul>
-              {
-                info.listItems.map((item,index) => {
-                  return (<li>{item}</li>);
-                })
-              }
+                {info.listItems.map((item, index) => {
+                  return <li>{item}</li>;
+                })}
               </ul>
-            </div>
+            </React.Fragment>
           );
-          
-        })
-      }
+        })}
+      </InfoBoxWrapper>
 
       {/* {
         info.map((infoList,i) => {
@@ -128,8 +163,8 @@ function ProjectInfoBox(props){
           
         })
       } */}
-    </ProjectInfoBoxContainer>
+    </InfoBoxContainer>
   );
 }
 
-export default ProjectInfoBox;
+export default InfoBox;

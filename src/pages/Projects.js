@@ -14,7 +14,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
     mainLanguageImg: Javascript, // "../img/logos/javascriptLogo.png"
     projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
     summary:
-      "This browser app allows gamers who compete in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
+      "This browser app allows competitors in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
     summaryExtended: "",
     projectDetails: [
       {
