@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import MyLocalLocals from "../img/mylocallocals.png";
 import TenCT from "../img/10CT.png"
@@ -62,10 +62,11 @@ const ProjectStyle = styled.div`
     margin: 0 auto;
     margin-bottom: 2.5rem;
     padding: 0;
-    max-height: 80vh;
   }
 
   .projectSection {
+    height:100%;
+    width:100%;
     margin: 0rem !important;
   }
 
@@ -133,7 +134,7 @@ const ProjectStyle = styled.div`
     font-size: 0.55rem;
   }
 
-  .projectDetails{
+  .projectInfo{
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -177,7 +178,15 @@ function Project(props){
 
   // const variables = ["projectTitle", "siteURL", "mainLanguage", "mainLanguageImage", "projectImgSrc", "summary"];
   // let props = mllProps;
-  const {projectTitle, siteURL, mainLanguage, mainLanguageImg, projectImgSrc, summary, summaryExtended, projectDetails, projectTools, projectChanges } = props;
+  const {projectTitle, siteURL, mainLanguage, mainLanguageImg, projectImgSrc, summary, summaryExtended, projectInfo, projectTools, projectChanges } = props;
+
+  const [selectedInfoButton, setSelectedInfoButton] = useState("details");
+
+  const handleClickProjectButton = (buttonText) => {
+    setSelectedInfoButton(buttonText.toLowerCase());
+  };
+
+
   return (
     <ProjectStyle>
       <div className="projectCard ff7Style">
@@ -204,18 +213,18 @@ function Project(props){
         <div className="projectSection projectSummary ff7Style">
           <h5>{summary}</h5>
         </div>
-        <div className="projectSection projectDetails">
+        <div className="projectSection projectInfo">
           <InfoBox 
-            projectInfo={projectDetails}/>
+            projectInfo={projectInfo[selectedInfoButton]}/>
         </div>
         <div className="ff7Style projectButtonContainer row">
-          <div className="projectButton">
+          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
             <h4 className="buttonText">Details</h4>
           </div>
-          <div className="projectButton">
+          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
             <h4 className="buttonText">Tools</h4>
           </div>
-          <div className="projectButton">
+          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
             <h4 className="buttonText">Changes</h4>
           </div>
           <a

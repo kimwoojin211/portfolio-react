@@ -1,22 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import Project from '../components/Project';
-import {Carousel} from 'react-responsive-carousel';
-import MyLocalLocals from '../img/mylocallocals.png';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Project from "../components/Project";
+import { Carousel } from "react-responsive-carousel";
+import MyLocalLocals from "../img/mylocallocals.png";
 import TenCT from "../img/10CT.png";
 import Javascript from "../img/logos/javascriptLogo.png";
+import PropTypes from "prop-types";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-  const mllProps = {
-    projectTitle: "My Local Locals",
-    siteURL: "https://my-local-locals.vercel.app",
-    mainLanguage: "Javascript",
-    mainLanguageImg: Javascript, // "../img/logos/javascriptLogo.png"
-    projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
-    summary:
-      "This browser app allows competitors in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
-    summaryExtended: "",
-    projectDetails: [
+const mllProps = {
+  projectTitle: "My Local Locals",
+  siteURL: "https://my-local-locals.vercel.app",
+  mainLanguage: "Javascript",
+  mainLanguageImg: Javascript, // "../img/logos/javascriptLogo.png"
+  projectImgSrc: MyLocalLocals, // "../img/mylocallocals.png"
+  summary:
+    "This browser app allows competitors in platform fighting video games (such as Super Smash Brothers) to search for tournaments local to a requested search location.",
+  summaryExtended: "",
+  projectInfo: {
+    details: [
       {
         sectionTitle: "Details",
         listItems: [
@@ -28,7 +30,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
         ],
       },
     ],
-    projectTools: [
+    tools: [
       {
         sectionTitle: "Languages",
         listItems: ["Javascript", "CSS", "HTML", "GraphQL"],
@@ -56,36 +58,38 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
         ],
       },
     ],
-    projectChanges: [
+    changes: [
       {
         sectionTitle: "Version v0.0.1",
         listItems: ["Added a background"],
       },
     ],
-  };
+  },
+};
 
-  const tenCTProps = {
-    projectTitle: "10CTControllers",
-    siteURL: "https://10ctcontrollers.com",
-    mainLanguage: "Javascript",
-    mainLanguageImg: Javascript,
-    projectImgSrc: TenCT,
-    summary:
-      "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
-    summaryExtended: "",
-    projectDetails: [
+const tenCTProps = {
+  projectTitle: "10CTControllers",
+  siteURL: "https://10ctcontrollers.com",
+  mainLanguage: "Javascript",
+  mainLanguageImg: Javascript,
+  projectImgSrc: TenCT,
+  summary:
+    "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
+  summaryExtended: "",
+  projectInfo: {
+      details: [
       {
         sectionTitle: "Details",
         listItems: [
-          `Homepage features a hero section with smooth slideshow carousel highlighting business products`,
+          `Home hero section with a smooth slideshow carousel, highlighting business products and environment`,
           "Fluid transitions between pages using HashRouters from react-router-dom",
-          "Features list of modifications that display tooltip descriptions and images on hover",
+          "Displays list of modifications with tooltips that display descriptions and images on hover",
           "Interactive FAQ page that displays answers to questions on click",
           "Twitter testimonial slideshow autoplays at bottom of webpage",
         ],
       },
     ],
-    projectTools: [
+    tools: [
       {
         sectionTitle: "Languages",
         listItems: ["Javascript", "CSS", "HTML"],
@@ -106,15 +110,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
         ],
       },
     ],
-    projectChanges: [
+    changes: [
       {
         sectionTitle: "Version v0.0.1",
         listItems: ["Added a background"],
       },
-    ],
-  };
+    ]
+  }
+};
 
-  //summaryExpanded: "10CTControllers provides modification & repair services for competitors looking for the"
+//summaryExpanded: "10CTControllers provides modification & repair services for competitors looking for the"
 
 const ProjectPageStyle = styled.div`
   width: 100%;
@@ -172,7 +177,10 @@ const ProjectPageStyle = styled.div`
   }
 `;
 
-function Projects(){
+function Projects(props) {
+  const [selectedProj, setSelectedProj] = useState(null);
+  // const {onProjectButtonSelected} = props;
+
   return (
     <ProjectPageStyle>
       <h1 className="pageTitle">Projects</h1>
@@ -180,8 +188,8 @@ function Projects(){
         <div className="projectContainer">
           {/* <h2 className="projectCategoryTitle">Community Projects</h2> */}
           {/* <Carousel centerMode={true} centerSlidePercentage={80}> */}
-            <Project {...mllProps} />
-            <Project {...tenCTProps} />
+          <Project {...mllProps} />
+          <Project {...tenCTProps} />
           {/* </Carousel> */}
 
           {/* <h2 className="projectCategoryTitle">Bootcamp Projects</h2>
@@ -203,7 +211,7 @@ function Projects(){
                   alt="My Local Locals"
                 ></img>
               </div>
-              <div className="projectDetails ff7Style">
+              <div className="projectInfo ff7Style">
                 <h5 className="projectSummary">
                   This browser app allows platform fighting video game
                   competitors (such as Super Smash Brothers) to search for local
@@ -227,7 +235,7 @@ function Projects(){
             </div>
             <img className="projectImg"></img>
             <div className="projectCardBody">
-              <div className="projectDetails">
+              <div className="projectInfo">
                 <h5>Project Summary</h5>
                 <ul className="projectDescription">
                   <li>

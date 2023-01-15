@@ -46,7 +46,7 @@ class PageControl extends React.Component{
   }      
 
 
-  handleClickNav= (page) => {
+  handleClickNav = (page) => {
     if (page === 'Menu'){ // mobile mode, screen is <525px wide;
       this.setState(prevState => ({
       menuActive: !prevState.menuActive, contactDisplay: false}))
@@ -80,7 +80,6 @@ class PageControl extends React.Component{
       }
     }
   }
-
 
   render(){
     const {pages, activePage, contactDisplay, menuActive, pageBackground} = this.state; 

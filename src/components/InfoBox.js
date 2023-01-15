@@ -62,7 +62,7 @@ const InfoBoxContainer = styled.div`
 
 const InfoBoxWrapper = styled.div`
   // border: 1px solid red;
-  height: 10rem;
+  height: 8rem;
   overflow-y: scroll;
   // padding-right: 10px;
 
@@ -71,8 +71,9 @@ const InfoBoxWrapper = styled.div`
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 
   h5 {
-    font-size: 0.76125rem;
+    font-size: 0.7rem;
     margin-left: 0.4rem !important;
+    text-shadow: -0.5px 0.8px #ff5151 !important;
   }
 
   ul {
@@ -86,12 +87,13 @@ const InfoBoxWrapper = styled.div`
 
   ::-webkit-scrollbar {
     width: 5px;
+    height: 2px;
     background-color: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #595959;
-    border-radius: 2rem;
+    background-color: #696969;
+    border-radius: 0.5rem;
   }
 `;
 
