@@ -17,16 +17,25 @@ const HeroOverlay = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   align-items: center;
 
-  .heroTitle{
-    font-size: 3.6vmin;
+  .heroTitle {
+    font-size: 1.1rem;
     width: 100%;
-    padding: 13vh 0 .25em;
+    padding: 13vh 0 0.25em;
     color: white;
     text-align: center;
     text-shadow: 3px 4px black, 5px 5px rgb(112, 128, 141);
+
+    @media (min-width: 375px) {
+      font-size: 1.3rem;
+    }
+    @media (min-width: 425px) {
+      font-size: 1.47rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
   }
 `;
 

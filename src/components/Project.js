@@ -7,67 +7,22 @@ import InfoBox from "./InfoBox.js";
 
 
 const ProjectStyle = styled.div`
-  width: 100%;
-  margin: 3px auto;
-  color: white;
-
-  .row {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .ff7Style {
-    border: solid 1px #424542;
-    box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
-      -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
-    margin: 1px auto;
-    padding: 0.25rem;
-
-    background: #04009d;
-    background: -moz-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0%, #04009d),
-      color-stop(100%, #06004d)
-    );
-    background: -webkit-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -o-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: -ms-linear-gradient(top, #04009d 0%, #06004d 100%);
-    background: linear-gradient(to bottom, #04009d 0%, #06004d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );
-
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-  }
-
-  .ff7Style  * {
-    color: #eff1ff;
-    text-shadow: 2px 2px #212421, 1px 1px #212021;
-    font-family: Verdana, sans-serif;
-    font-weight: normal;
-    margin: 3px 0;
-    line-height: 1.3;
-    text-decoration: none;
-  }
-
   .projectCard {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2.5rem;
+    width: 90%;
+    margin-bottom: 2.5rem !important;
     padding: 0;
-  }
+    max-width: 420px;  
+
+    @media (min-width: 375px) {
+      font-size: 1.27rem;
+    }
+    
+    @media (min-width: 768px) {
+      max-width: 540px;
+    }
 
   .projectSection {
-    height:100%;
-    width:100%;
-    margin: 0rem !important;
+
   }
 
   // .projectSection:not(:last-child) {
@@ -76,75 +31,94 @@ const ProjectStyle = styled.div`
 
   .projectHeader {
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1rem;
     padding: 0.5rem;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0.5rem;
     align-items: center;
+    font-size: 1.16125rem;
+      
+    @media (min-width: 375px) {
+      font-size: 1.27rem;
+    }
   }
 
   .projectTitle {
-    font-size: 1rem;
+    ;
   }
   
   .projectLanguages {
-    width: 1.5em !important;
-    height: 1.5em !important;
+    width: 1.4em !important;
+    height: 1.4em !important;
   }
 
   .projectImgWrapper {
-    margin:0;
+    margin: 0 !important;
   }
 
   .projectImg {
     width: 100%;
     height: 100%;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   
-  
-  .projectSummary h5{
-    font-size: 0.59125rem;
-    text-align: left;
-    margin: 0.5rem !important;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
+  .projectSummary{
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
 
+
+  }
+
+  .projectSummary h5{
+    font-size: 0.67rem;
+    text-align: left;
+    padding: 1rem;
+    overflow: hidden;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 6;
+    // -webkit-box-orient: vertical;
+
+    @media (min-width: 375px) {
+      font-size: 0.72rem;
+      padding: 0.5rem 1rem 0.5rem 1.3rem;
+    }
+  }
+  
+  .projectInfoBox{
+    // width:100%;
+    background: #06004d;
+    margin: 3px 0;
+    padding: 1px 0;
   }
 
   .projectButtonContainer {
-    padding: 0.3rem 0.1rem;
-    margin: 0;
+    display: flex;
+    padding: 0.4rem 0.2rem;
+    margin-bottom: 0px;
+    justify-content: space-evenly;
   }
 
   .projectButton {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    margin: 0 0.15rem;
-    padding: 0.2rem 0;
-    box-shadow: 0.75px 0.75px white, -0.5px -0.5px #c1c1c1;
-    border-radius: 0.3rem;
-  }
-
-  .projectButton * {
-    font-size: 0.55rem;
-  }
-
-  .projectInfo{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    background: #06004d;
-    z-index:-1;
-    margin:3px 0 !important;
-  }
-
-  .buttonText {
     text-align: center;
+    max-width: 22%;
+    padding: 0.25rem !important;
+    margin: 0 5px !important;
+    border-radius: 0.3rem;
+    box-shadow: 0.75px 0.75px white, -0.5px -0.5px #c1c1c1;
+    font-size: 0.58rem !important;
+    cursor: pointer;
+    flex-grow:1;
+
+    @media (min-width: 375px) {
+      font-size: 0.68rem !important;
+      box-shadow: 0.8px 0.8px white, -0.8px -0.8px #c1c1c1;
+    }
+    
+    @media (min-width: 768px) {
+      box-shadow: 1px 1px white, -1px -1px #c1c1c1;
+      padding: 0.35rem !important;
+      max-width: 20%;
+    }
   }
 
   .expanded{
@@ -190,41 +164,49 @@ function Project(props){
   return (
     <ProjectStyle>
       <div className="projectCard ff7Style">
-        <div className="projectSection projectHeader row ff7Style">
-          <h3 className="projectTitle">
-            <a href={siteURL} rel="noopener noreferrer" target="_blank">
-              {projectTitle}
-            </a>
-          </h3>
-          <img
-            className="projectLanguages mainLanguage"
-            src={mainLanguageImg}
-            alt={mainLanguage}
-          />
-        </div>
+        <a href={siteURL} rel="noopener noreferrer" target="_blank">
+          <div className="projectHeader projectSection ff7Style row">
+            <h3 className="projectTitle">{projectTitle}</h3>
+            <img
+              className="projectLanguages mainLanguage"
+              src={mainLanguageImg}
+              alt={mainLanguage}
+            />
+          </div>
+        </a>
 
-        <div className="projectSection projectImgWrapper">
-          <img
-            className="projectImg"
-            src={projectImgSrc}
-            alt={projectTitle}
-          ></img>
+        <div className="projectImgWrapper projectSection">
+          <a href={siteURL} rel="noopener noreferrer" target="_blank">
+            <img
+              className="projectImg"
+              src={projectImgSrc}
+              alt={projectTitle}
+            />
+          </a>
         </div>
         <div className="projectSection projectSummary ff7Style">
           <h5>{summary}</h5>
         </div>
-        <div className="projectSection projectInfo">
-          <InfoBox 
-            projectInfo={projectInfo[selectedInfoButton]}/>
+        <div className="projectSection projectInfoBox">
+          <InfoBox projectInfo={projectInfo[selectedInfoButton]} />
         </div>
         <div className="ff7Style projectButtonContainer row">
-          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
+          <div
+            className="projectButton"
+            onClick={(e) => handleClickProjectButton(e.target.innerText)}
+          >
             <h4 className="buttonText">Details</h4>
           </div>
-          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
+          <div
+            className="projectButton"
+            onClick={(e) => handleClickProjectButton(e.target.innerText)}
+          >
             <h4 className="buttonText">Tools</h4>
           </div>
-          <div className="projectButton" onClick={ (e) => handleClickProjectButton(e.target.innerText)}>
+          <div
+            className="projectButton"
+            onClick={(e) => handleClickProjectButton(e.target.innerText)}
+          >
             <h4 className="buttonText">Changes</h4>
           </div>
           <a
@@ -233,9 +215,7 @@ function Project(props){
             rel="noopener noreferrer"
             target="_blank"
           >
-            {/* <div className="projectButton"> */}
             <h4 className="buttonText">Github</h4>
-            {/* </div> */}
           </a>
         </div>
       </div>

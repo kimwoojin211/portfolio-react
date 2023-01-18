@@ -13,35 +13,17 @@ import ProjectsBackground from "../img/backgrounds/lake.jpg";
 import ShopBackground from "../img/backgrounds/palmsprings.jpg";
 
 
-const PageStyle = styled.div`
-  width:100%;
-  min-width: 320px;
-  height:auto;
-  min-height: 100vh;
-  color: #008080;
-  display:flex;
-  flex-direction: column;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-size: 14px;
-  
-
-  @media (max-width: 768px) {
-    font-size:12px;
-  }
-`;
-
 
 class PageControl extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      pages: {'Home':'','About':'','Projects':'','Shop':'','Contact':''},
-      activePage: 'Home',
+      // pages: {'Home':'','About':'','Projects':'','Shop':'','Contact':''},
+      pages: {'Home':'','Projects':'','Contact':''},
+      activePage: "Home",
       contactDisplay: false,
-      menuActive: false,  
-      pageBackground: HomeBackground
+      menuActive: false,
+      pageBackground: HomeBackground,
     };
   }      
 
@@ -110,25 +92,29 @@ class PageControl extends React.Component{
         return <Shop/>;
 
       default:
-        return <Projects />;
-        // return <Home/>;
+        // return <Projects />;
+        return <Home />;
       //return <404 />;
     }
   };
 
-    return(
-      <PageStyle style={{backgroundImage:pageBackground}}>
-        <Navbar 
+    return (
+      // <PageStyle style={{backgroundImage:pageBackground}}>
+      <React.Fragment>
+        <Navbar
           activePage={activePage}
           pageClasses={pageClasses}
           onClickNav={this.handleClickNav}
-          menuStyle= {menuStyles}
-          />
-        <Contact ContactDisplayState={this.state.contactDisplay} />
-        {DisplayPage()}
+          menuStyle={menuStyles}
+        />
+        {/* <Contact ContactDisplayState={this.state.contactDisplay} /> */}
+        {/* <PageBody> */}
+          {DisplayPage()}
+        {/* </PageBody> */}
         {/* <Footer/> */}
-      </PageStyle>
-    )
+      </React.Fragment>
+      // </PageStyle>
+    );
   }
 }
 
