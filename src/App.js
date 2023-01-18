@@ -38,9 +38,11 @@ const AppContainer = styled.div`
     text-align: center;
     /* color: yellow;
   text-shadow: 3px 4px black, 5px 5px rgb(112, 128, 141); */
-  }
 
-  
+    @media (min-width: 768px) {
+      margin-top: 4.5rem;
+    }
+  }
 
   @media (min-width: 768px) {
     font-size: 14px;

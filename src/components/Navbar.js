@@ -54,10 +54,6 @@ const NavbarWrapper = styled.div`
     padding: 0 5px;
     font-family: "Monoton";
     // overflow: hidden;
-
-    @media (min-width: 768px) {
-      padding: 0px 15px 0 10px;
-    }
   }
 
   .navItem:hover,
@@ -83,7 +79,11 @@ const NavbarWrapper = styled.div`
 
   .navItem:not(.Home) {
     padding-top: 0.6rem;
-    margin: 0 0rem 0 0.5rem;
+    margin: 0 0 0 0.5rem;
+    @media (min-width: 768px) {
+      padding: 0px 4px 0 20px;
+      margin: 0.5rem 0 0 0.5rem;
+    }
   }
 `;
 

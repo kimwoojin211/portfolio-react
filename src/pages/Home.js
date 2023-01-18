@@ -5,21 +5,23 @@ import HomeContent from '../components/HomeContent';
 import { FullPage, Slide } from 'react-full-page';
 
 const HomeStyle = styled.div`
-  height:200vh;
+  // height:200vh;
+  height:100vh;
   };
 `;
 
 function Home(){
-  return(
+  return (
     <HomeStyle>
-      <FullPage>
+      <HomeHero />
+      {/* <FullPage>
         <Slide>
           <HomeHero/>
         </Slide>
         <Slide>
           <HomeContent/>
         </Slide>
-      </FullPage>
+      </FullPage> */}
     </HomeStyle>
   );
 }
