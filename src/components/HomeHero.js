@@ -35,7 +35,7 @@ const HeroOverlay = styled.div`
       font-size: 1.47rem;
     }
     @media (min-width: 768px) {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
   }
 `;
 

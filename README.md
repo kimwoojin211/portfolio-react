@@ -13,6 +13,8 @@
 * _styled-components_
 * _react-full-page_
 * _react-transition-group_
+* _react-responsive-carousel_
+
 
 
 ## Known Bugs
@@ -116,4 +118,4 @@ _MIT_
 
 _Woo Jin Kim (kimwoojin211@gmail.com)_
 
-Copyright (c) 2022 Woo Jin Kim
+Copyright (c) 2023 Woo Jin Kim

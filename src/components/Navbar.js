@@ -87,88 +87,15 @@ const NavbarWrapper = styled.div`
   }
 `;
 
-// const NavbarOverlay = styled.div`
-//   // // display: flex;
-//   // display: none;
-//   // width: 100%;
-//   // height: 100%;
-//   // align-items: center;
-//   // position: fixed;
-//   // background-color: none;
-  
-//     // height: var(--mobile-menu-overlay-height, "9vh");
-//     flex-direction: column;
-//     justify-content: space-between;
-//     padding: 15px 0 60px 0;
-//     font-size: 1.3rem;
-//     background-color: var(--mobile-menu-overlay-color, "rgb(0,0,0,0.95)");
-//     border-radius: 10px;
-//     overflow: hidden;
-
-//     // a:not(.Home) {
-//     //   display: var(--mobile-menu-display, "none");
-//     // }
-
-//     .Home {
-//       display: flex;
-//       z-index: 2;
-//       font-size: 2.2rem;
-//     }
-//   }
-
-
-//   @media (min-width: 525px) {
-//     // display: flex;
-//     width: 100%;
-//     height: 100%;
-//     align-items: center;
-//     position: fixed;
-//     background-color: none;
-//   }
-
-//   // @media (max-width: 525px) {
-//   //   // height: var(--mobile-menu-overlay-height, "9vh");
-//   //   flex-direction: column;
-//   //   justify-content: space-between;
-//   //   padding: 15px 0 60px 0;
-//   //   font-size: 1.3rem;
-//   //   background-color: var(--mobile-menu-overlay-color, "rgb(0,0,0,0.95)");
-//   //   border-radius: 10px;
-//   //   overflow: hidden;
-
-//   //   // a:not(.Home) {
-//   //   //   display: var(--mobile-menu-display, "none");
-//   //   // }
-
-//   //   .Home {
-//   //     display: flex;
-//   //     z-index: 2;
-//   //     font-size: 2.2rem;
-//   //   }
-//   // }
-// `;
-
-// const NavbarMenu = styled.div`
-//   margin-left: auto;
-//   display: flex;
-//   height: 100%;
-//   font-size: 2rem;
-//   align-items: center;
-//   padding: 2vw 1vw 0 0;
-//   z-index: 2;
-
-//   @media (min-width: 525px) {
-//   }
-// `;
 
 function Navbar(props) {
   const { onClickNav, pageClasses } = props;
-  const {
-    menuDisplay,
-    menuClass,
-    mobileMenuOverlayColor,
-    mobileMenuOverlayHeight,
-  } = props.menuStyle;
+  // const {
+  //   menuDisplay,
+  //   menuClass,
+  //   mobileMenuOverlayColor,
+  //   mobileMenuOverlayHeight,
+  // } = props.menuStyle;
 
   function handleClick(event, page) {
     event.preventDefault();
@@ -177,11 +104,11 @@ function Navbar(props) {
 
   return (
     <NavbarContainer
-      style={{
-        "--mobile-menu-display": menuDisplay,
-        "--mobile-menu-overlay-color": mobileMenuOverlayColor,
-        "--mobile-menu-overlay-height": mobileMenuOverlayHeight,
-      }}
+      // style={{
+      //   "--mobile-menu-display": menuDisplay,
+      //   "--mobile-menu-overlay-color": mobileMenuOverlayColor,
+      //   "--mobile-menu-overlay-height": mobileMenuOverlayHeight,
+      // }}
     >
       {/* <NavbarOverlay> */}
       <NavbarWrapper>
@@ -195,10 +122,6 @@ function Navbar(props) {
           </a>
         ))}
       </NavbarWrapper>
-      {/* </NavbarOverlay> */}
-      {/* <NavbarMenu>
-        <a href='/' className={menuClass} onClick={(e) => handleClick(e,'Menu')}>Menu</a>
-      </NavbarMenu> */}
     </NavbarContainer>
   );
 }
@@ -209,7 +132,7 @@ Navbar.propTypes = {
   activePage: PropTypes.string,
   pageClasses: PropTypes.object,
   menuClass: PropTypes.string,
-  menuStyle: PropTypes.object,
+  // menuStyle: PropTypes.object,
 };
 
 export default Navbar;

@@ -2,7 +2,7 @@ import MLLImg from "../img/mylocallocals.png"
 import TenCTImg from "../img/10CT.png"
 import JavascriptLogo from "../img/logos/javascriptLogo.png"
 
-const projectProps = {
+const ProjectProps = {
   "mllProps": 
   {
     "projectTitle": "My Local Locals",
@@ -55,8 +55,28 @@ const projectProps = {
       ],
       "changes": [
         {
-          "sectionTitle": "Version v0.0.1",
-          "listItems": ["Added a background"]
+          "sectionTitle": "Version beta v0.2",
+          "listItems": [
+                          "Overall redesign of every component",
+                          "Improved responsive mobile design",
+                          "Added more games to game filters (Rivals of Aether, Multiversus, Nickelodeon All-Stars Brawl)",
+                          "Added an option to sort tournament results by time or by distance from searched location",
+                          "Expanded distance search filter to 100 miles",
+                          "Added a 'Before Date' filter",
+                          "Displays the distance each tournament is from the search results",
+                          "Added a background",
+                      ]
+        },
+        {
+          "sectionTitle": "Version beta v0.1",
+          "listItems": [
+                        "Added searchbar with radius, date, and game filters",
+                        "Connect to Smash.GG's API to receive all the data relevant to user's search",
+                        "Added Google geolocation services to allow user to use current location for search",
+                        "Added expandable list of tournaments with details",
+                        "Added a Google Maps window that respond to a click on a tournament by displaying the tournament's location (desktop view only)",
+                        "Added basic responsive design between mobile and desktop views"
+                      ]
         }
       ]
     }
@@ -70,7 +90,7 @@ const projectProps = {
   "projectImgSrc": TenCTImg,
   "summary":
     "A website made for 10CT Controllers, a business that modifies Nintendo Gamecube controllers for competitors in Super Smash Brothers Melee.",
-  "summaryExtended": "",
+  "summaryExtended":"10CTControllers provides modification & repair services for competitors looking for the",
   "projectInfo": {
       "details": [
       {
@@ -107,12 +127,18 @@ const projectProps = {
     ],
     "changes": [
       {
-        "sectionTitle": "Version v0.0.1",
-        "listItems": ["Added a background"]
+        "sectionTitle": "Version v1.0",
+        "listItems": [
+                      "Added a slideshow background for the welcome hero section with pictures featuring the business and their products",
+                      "Transparent navigation bar with links to separate shop site & redirects to social media",
+                      "Twitter testimonial slideshow section at bottom of page with positive reviews for business",
+                      "Added a page that lists every available modification service provides with prices, along with tooltips that appear on hover with descriptions and images",
+                      "Interactive FAQ page that reveals the answer to a selected question on click",
+                  ]
       }
     ]
   }
 }
 }
 
-export default projectProps;  
+export default ProjectProps;  

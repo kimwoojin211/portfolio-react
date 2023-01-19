@@ -8,12 +8,7 @@ import './App.css';
 const AppContainer = styled.div`
   min-width: 320px;
   min-height: 100vh;
-
-  // color: #008080;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-
+  
   .row {
     display: flex;
     flex-direction: row;
@@ -28,8 +23,14 @@ const AppContainer = styled.div`
     display: none;
   }
 
+  .overlay{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.58); //make it variable?
+  }
+
   .pageTitle {
-    padding: 0.8rem 0;
+    padding: 1.5rem 0;
     // margin-top: 0 if home, navbar height if other
     margin-top: 4rem;
     margin-bottom: 1rem;

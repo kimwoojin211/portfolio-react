@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 // Details
-//  Features
+//    Features
 // Tools
-//  Languages
-//  Frameworks & Libraries
-//  Plugins & Tools
+//    Languages
+//    Frameworks & Libraries
+//    Plugins & Tools
 // Changes
-//  Version number
+//    Version number
 
 
 const InfoBoxContainer = styled.div`
@@ -43,7 +43,7 @@ const InfoBoxContainer = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-
+ 
   @media (min-width: 375px) {
     font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
@@ -52,10 +52,8 @@ const InfoBoxContainer = styled.div`
 `;
 
 const InfoBoxWrapper = styled.div`
-  // border: 1px solid red;
   height: 12em;
   overflow-y: scroll;
-  // padding-right: 10px;    
 
 
   scrollbar-width: 5px; /* Firefox */
@@ -100,39 +98,10 @@ const ProjectInfoSection = styled.div`
 `;
 
 
-  // const info = [
-  //   {
-  //     listTitle: "Details",
-  //     listItems: [
-  //       `Searches for upcoming tournaments using Google Maps API & Start.GG's GraphQL API`,
-  //       "Display all tournaments from search result in a scrollable list",
-  //       "Filter results by game, date, or distance from searched address",
-  //       "Show details of tournament on selection, including date, location, and all events",
-  //       "Sort tournament search results by either date or distance from searched address",
-  //     ],
-  //   },
-  // ];
-  // const info2 = [
-  //   {
-  //     listTitle: "Languages",
-  //     listItems: ["Javascript", "CSS", "HTML"],
-  //   },
-  //   {
-  //     listTitle: "Frameworks/Libraries",
-  //     listItems: ["React.JS", "someother", "stuff"],
-  //   },
-  //   {
-  //     listTitle: "Plugins/Tools",
-  //     listItems: ["some", "stuff", "ok"],
-  //   },
-  // ];
-
 
 function InfoBox(props){
   const { projectInfo } = props;
 
-  // const infolist = [info, info2];
-  
   return (
     <InfoBoxContainer className="ff7Style">
       <InfoBoxWrapper>
@@ -149,24 +118,6 @@ function InfoBox(props){
           );
         })}
       </InfoBoxWrapper>
-
-      {/* {
-        info.map((infoList,i) => {
-          return (
-            <div>
-              <h5>{infoList.listTitle}</h5>
-              <ul>
-              {
-                infoList.listItems.map((item,index) => {
-                  return (<li>{item}</li>);
-                })
-              }
-              </ul>
-            </div>
-          );
-          
-        })
-      } */}
     </InfoBoxContainer>
   );
 }

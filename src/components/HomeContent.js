@@ -9,7 +9,6 @@ const ContentContainer = styled.div`
   color: white;
   height: 100vh;
   align-items: center;
-  // justify-content: center;
   border: 1px solid blue;
 `;
 
@@ -19,7 +18,6 @@ const ContentBannerWrapper = styled.div`
   height: 55%;
   width: 100%;
   align-items: center;
-  // justify-content: space-around;
   flex-wrap: wrap;
   border: 1px solid red;
   min-height: 500px;
@@ -28,15 +26,8 @@ const ContentBannerWrapper = styled.div`
 const ContentTextStyle = styled.div`
   display: flex;
   flex-direction: column;
-  // padding: 0 2vw 0 2vw;
-  // min-width: 76%;
-  // max-width: 90%;
   width:90%;
-  // border: 1px solid yellow;
 
-  *{
-    // border: 1px solid blue;
-  }
   h1 {
     text-align: center;
     margin: 1rem auto;
@@ -47,7 +38,6 @@ const ContentTextStyle = styled.div`
     text-align: left;
     font-size: 0.87rem;
     margin: 1.1rem auto;
-    // margin-left: 5rem;
   }
 `;
 
@@ -55,7 +45,6 @@ const ProfilePic = styled.div`
   width: 45%;
   max-width: 250px;
   padding: 0 1.7vw 0 1.7vw;
-  // border: 1px solid purple;
 
   img {
     border: solid;
