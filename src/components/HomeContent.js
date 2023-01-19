@@ -7,54 +7,54 @@ const ContentContainer = styled.div`
   width: 100%;
   background: black;
   color: white;
-  height: 100vh;  
+  height: 100vh;
   align-items: center;
-  padding-top: 4vh;
-  font-size: 1.5vmax;
+  border: 1px solid blue;
 `;
 
 const ContentBannerWrapper = styled.div`
-  display:flex;
+  display: flex;
   background-color: rgba(255, 206, 83, 0.442);
-  height: 55vh;
-  width: 100%;  
+  height: 55%;
+  width: 100%;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  border: 1px solid red;
+  min-height: 500px;
 `;
 
-const ContentTextStyle =styled.div`
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2vw 0 2vw;
-  min-width: 76%;
-  max-width: 100%;
+const ContentTextStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  width:90%;
 
-  h1{
+  h1 {
     text-align: center;
-    padding-bottom: 3vh;
-    font-size: 1.8em;
+    margin: 1rem auto;
+    font-size: 1.7rem;
   }
 
-  h3{
-    font-size: 1.2em;
+  h3 {
+    text-align: left;
+    font-size: 0.87rem;
+    margin: 1.1rem auto;
   }
 `;
 
 const ProfilePic = styled.div`
-    max-width:23vmax;
-    padding: 0 1.7vw 0 1.7vw;
+  width: 45%;
+  max-width: 250px;
+  padding: 0 1.7vw 0 1.7vw;
 
-    img{
+  img {
     border: solid;
     border-width: 2px;
     border-color: white;
     border-radius: 100%;
-    width:100%;
-    height:100%;
-    }
-`
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 function HomeContent(){
   return(
@@ -62,9 +62,10 @@ function HomeContent(){
         <ContentBannerWrapper>
           <ContentTextStyle>
             <h1>Currently Under Construction</h1>
-            <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects</h3>
-            <h3>Come visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for a little more of my history.</h3>
-            <h3>Connect with me! Click on "Contact" for the best way to get in touch!</h3>
+            <h3>Come back later to see more updates done to this website!</h3>
+            <h3>Check out my <a href="https://www.github.com/kimwoojin211">Github</a> for some example of coding projects.</h3>
+            <h3>Visit my <a href="https://www.linkedin.com/in/kimwoojin211/">LinkedIn</a> for my work history.</h3>
+            <h3>Click on "Contact" in the top right corner to get in touch!</h3>
 
           </ContentTextStyle>
           <ProfilePic>

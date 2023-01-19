@@ -13,6 +13,8 @@
 * _styled-components_
 * _react-full-page_
 * _react-transition-group_
+* _react-responsive-carousel_
+
 
 
 ## Known Bugs
@@ -104,6 +106,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+## Acknowledgements
+
+* Thank you to [Kaizzo](https://codepen.io/Kaizzo) on CodePen for the [Final Fantasy themed dialogue box CSS](https://codepen.io/Kaizzo/pen/aGWwMM) in the Projects page.
+
 ## License
 
 _MIT_
@@ -112,4 +118,4 @@ _MIT_
 
 _Woo Jin Kim (kimwoojin211@gmail.com)_
 
-Copyright (c) 2022 Woo Jin Kim
+Copyright (c) 2023 Woo Jin Kim

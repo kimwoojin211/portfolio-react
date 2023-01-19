@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentUC from '../components/ContentUC';
-import AboutBackground from '../img/beach.jpg';
+import AboutBackground from '../img/backgrounds/beach.jpg';
 
   const line1 = {
     'text':'Click ',

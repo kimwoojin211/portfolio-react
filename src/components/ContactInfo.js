@@ -5,23 +5,43 @@ import PropTypes from 'prop-types';
 const ContactInfoStyle = styled.div`
   display: flex;
   height: 20%;
-  margin: 5px 0px 5px 47px;
+  width: 100%;
+  margin-bottom: 0.4rem;
 
-  img{
-      width: 36px;
-      height: 36px;
+  img {
+    width: 22px;
+    height: 22px;
+
+    @media (min-width: 768px) {
+      width: 33px;
+      height: 33px;
+    }
   }
 
-  a{
+  a {
     font-family: sans-serif;
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.90125rem;
     align-self: center;
     text-shadow: var(--text-shadow, none);
+
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+    }
   }
-  
-  .usernameStyle{
-    padding-left:1.7em;
+
+  .usernameStyle {
+    padding-left: 1.7em;
+    width: 75%;
+  }
+
+  .contactIcon {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      margin: 0;
+    }
   }
 `;
 
@@ -36,7 +56,7 @@ function ContactInfo(props){
 
   return(
     <ContactInfoStyle style={{'--text-shadow': textShadow}}>
-      <a href={redirectURL}><img src={iconSrcURL}/></a>
+      <a href={redirectURL} className="contactIcon"><img src={iconSrcURL}/></a>
       <a href={redirectURL} className='usernameStyle'>{username}</a>
     </ContactInfoStyle>
   );

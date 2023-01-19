@@ -24,3 +24,5 @@ yarn-error.log*
 
 log.txt
 changelog.txt
+/pictures/
+ProjectsCopy.js
